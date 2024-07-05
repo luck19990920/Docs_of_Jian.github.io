@@ -1,0 +1,89 @@
+site_name: Docs of Jian
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      
+theme:
+  name: material
+  language: zh
+  palette:
+    # Palette toggle light mode
+    - scheme: default
+      # Set primary color used for header light blue
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: 切换至夜间模式
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至日间模式
+
+    
+  icon:
+    admonition:
+      note: fontawesome/solid/note-sticky
+
+
+  features:
+    - search.highlight
+    - content.code.copy
+    - content.code.select
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.share
+
+  icon:
+    repo: fontawesome/brands/github
+
+  custom_dir: overrides
+
+plugins:
+  - search
+  
+nav:
+  - index.md
+  - 计算化学:
+    - 量子化学:
+      - 计算化学/量子化学/ORCA的使用.md
+      - 计算化学/量子化学/ORCA与Multiwfn计算RESP电荷脚本分析.md
+  - 相关材料:
+    - 相关材料/相关材料.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/luck19990920
+
+copyright: Copyright &copy; 2024 Jian Zhang
+repo_url: https://github.com/luck19990920
+repo_name: Docs_of_Jian.github.io
+use_directory_urls: false
+
+
