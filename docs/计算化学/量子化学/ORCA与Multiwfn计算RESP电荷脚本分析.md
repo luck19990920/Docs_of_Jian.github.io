@@ -356,16 +356,11 @@ rm calcall.txt
 
 ### 参考材料
 
-<div title='http://sobereva.com/441'><a href='http://sobereva.com/441' target='_blank'>[1] RESP拟合静电势电荷的原理以及在Multiwfn中的计算</a></div>
-
-<div title='http://sobereva.com/multiwfn/'><a href='http://sobereva.com/multiwfn/' target='_blank'>[2] Multiwfn manual</a></div>
-
-<div title='http://sobereva.com/210'><a href='http://sobereva.com/210' target='_blank'>[3] DFT-D色散校正的使用</a></div>
-
-<div title='https://github.com/luck19990920'><a href='https://github.com/luck19990920' target='_blank'>[4] ORCA manual 5.0.3</a></div>
-
-<div title='http://bbs.keinsci.com/thread-24929-1-1.html'><a href='http://bbs.keinsci.com/thread-24929-1-1.html' target='_blank'>[5] 详谈Multiwfn的命令行方式运行和批量运行的方式</a></div>
-
-<div title='http://bbs.keinsci.com/thread-36574-1-1.html'><a href='http://bbs.keinsci.com/thread-36574-1-1.html' target='_blank'>[6] shell 编程-awk语法小结</a></div>
+[1] <a href='http://sobereva.com/441' target='_blank'>RESP拟合静电势电荷的原理以及在Multiwfn中的计算</a><br/>
+[2] <a href='http://sobereva.com/multiwfn/' target='_blank'>Multiwfn manual</a><br/>
+[3] <a href='http://sobereva.com/210' target='_blank'>DFT-D色散校正的使用</a><br/>
+[4] <a href='../../file/orca manual 5.0.3.pdf' target='_blank'>ORCA manual 5.0.3</a><br/>
+[5] <a href='http://bbs.keinsci.com/thread-24929-1-1.html' target='_blank'>详谈Multiwfn的命令行方式运行和批量运行的方式</a><br/>
+[6] <a href='http://bbs.keinsci.com/thread-36574-1-1.html' target='_blank'>shell 编程-awk语法小结</a>
 
 

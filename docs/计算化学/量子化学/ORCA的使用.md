@@ -124,7 +124,7 @@ SubOr.sh [name of input file for ORCA] [cores number, default: 16]
 ```
 %pal nprocs   10 end
 ```
-在利用`SubOr.sh`命令提交ORCA计算任务时，命令会自动把ORCA输入文件中所规定的核数改为`SubOr.sh`命令。
+在利用`SubOr.sh`命令提交ORCA计算任务时，命令会自动把ORCA输入文件中所规定的核数改为`SubOr.sh`命令中所规定的核数。
 
 !!! note "采用`SubOr.sh`脚本提交`ORCA`的注意事项"
 
@@ -178,4 +178,4 @@ gbw.sh [name of gbw file]
     </li>
 ### 参考材料
 
-<div title='http://sobereva.com/379'><a href='http://sobereva.com/379' target='_blank'>[1] 详谈Multiwfn支持的输入文件类型、产生方法以及相互转换</a></div>
+[1] <a href='http://sobereva.com/379' target='_blank'>详谈Multiwfn支持的输入文件类型、产生方法以及相互转换</a>
