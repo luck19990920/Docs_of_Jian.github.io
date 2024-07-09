@@ -22,6 +22,13 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
       
 theme:
   name: material
@@ -75,6 +82,7 @@ nav:
       - 计算化学/量子化学/ORCA与Multiwfn计算RESP电荷脚本分析.md
     - 分子动力学模拟:
       - 计算化学/分子动力学模拟/GROMACS的使用.md
+      - 计算化学/分子动力学模拟/PLUMED的使用.md
   - 计算机科学:
     - Fluent Python:
       - CS/fluent_python/chapter_2.md
