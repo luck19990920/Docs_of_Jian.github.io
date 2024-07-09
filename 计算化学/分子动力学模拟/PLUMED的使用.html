@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="GROMACS%E7%9A%84%E4%BD%BF%E7%94%A8.html">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../../CS/fluent_python/chapter_2.html">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
-        <title>Docs of Jian</title>
+        <title>PLUMED的使用 - Docs of Jian</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#plumedgromacs" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/index.html" title="Docs of Jian" class="md-header__button md-logo" aria-label="Docs of Jian" data-md-component="logo">
+    <a href="../../index.html" title="Docs of Jian" class="md-header__button md-logo" aria-label="Docs of Jian" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -97,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              PLUMED的使用
             
           </span>
         </div>
@@ -211,7 +220,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/index.html" class="md-tabs__link">
+      <a href="../../index.html" class="md-tabs__link">
         
   
     
@@ -226,17 +235,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/ORCA%E7%9A%84%E4%BD%BF%E7%94%A8.html" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/ORCA%E7%9A%84%E4%BD%BF%E7%94%A8.html" class="md-tabs__link">
           
   
   计算化学
@@ -263,7 +276,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/CS/fluent_python/chapter_2.html" class="md-tabs__link">
+        <a href="../../CS/fluent_python/chapter_2.html" class="md-tabs__link">
           
   
   计算机科学
@@ -284,7 +297,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99/%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99.html" class="md-tabs__link">
+        <a href="../../%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99/%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99.html" class="md-tabs__link">
           
   
   相关材料
@@ -317,7 +330,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/index.html" title="Docs of Jian" class="md-nav__button md-logo" aria-label="Docs of Jian" data-md-component="logo">
+    <a href="../../index.html" title="Docs of Jian" class="md-nav__button md-logo" aria-label="Docs of Jian" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -347,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -364,23 +377,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -391,7 +409,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             计算化学
@@ -443,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/ORCA%E7%9A%84%E4%BD%BF%E7%94%A8.html" class="md-nav__link">
+      <a href="../%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/ORCA%E7%9A%84%E4%BD%BF%E7%94%A8.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -464,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/ORCA%E4%B8%8EMultiwfn%E8%AE%A1%E7%AE%97RESP%E7%94%B5%E8%8D%B7%E8%84%9A%E6%9C%AC%E5%88%86%E6%9E%90.html" class="md-nav__link">
+      <a href="../%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/ORCA%E4%B8%8EMultiwfn%E8%AE%A1%E7%AE%97RESP%E7%94%B5%E8%8D%B7%E8%84%9A%E6%9C%AC%E5%88%86%E6%9E%90.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -490,6 +508,8 @@
                 
   
   
+    
+  
   
   
     
@@ -499,11 +519,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -517,7 +537,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             分子动力学模拟
@@ -531,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F/GROMACS%E7%9A%84%E4%BD%BF%E7%94%A8.html" class="md-nav__link">
+      <a href="GROMACS%E7%9A%84%E4%BD%BF%E7%94%A8.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -549,10 +569,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/%E5%88%86%E5%AD%90%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F/PLUMED%E7%9A%84%E4%BD%BF%E7%94%A8.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PLUMED的使用
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="PLUMED%E7%9A%84%E4%BD%BF%E7%94%A8.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -561,6 +599,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#plumedgromacs" class="md-nav__link">
+    <span class="md-ellipsis">
+      打了PLUMED补丁的GROMACS的使用方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plumed" class="md-nav__link">
+    <span class="md-ellipsis">
+      单独的PLUMED的使用方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考材料
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -664,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CS/fluent_python/chapter_2.html" class="md-nav__link">
+      <a href="../../CS/fluent_python/chapter_2.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CS/%E6%9D%82%E8%AE%B0/easy-Shermo%E7%A8%8B%E5%BA%8F%E7%BC%96%E5%86%99%E6%80%9D%E8%B7%AF%E7%90%86%E8%A7%A3.html" class="md-nav__link">
+      <a href="../../CS/%E6%9D%82%E8%AE%B0/easy-Shermo%E7%A8%8B%E5%BA%8F%E7%BC%96%E5%86%99%E6%80%9D%E8%B7%AF%E7%90%86%E8%A7%A3.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -805,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99/%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99.html" class="md-nav__link">
+      <a href="../../%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99/%E7%9B%B8%E5%85%B3%E6%9D%90%E6%96%99.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -844,6 +927,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#plumedgromacs" class="md-nav__link">
+    <span class="md-ellipsis">
+      打了PLUMED补丁的GROMACS的使用方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plumed" class="md-nav__link">
+    <span class="md-ellipsis">
+      单独的PLUMED的使用方法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考材料
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -854,8 +972,168 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+  <h1>PLUMED的使用</h1>
+
+<p><code>PLUMED</code>是用于分子动力学模拟增强采样与自由能计算的程序。该程序的官网为<a href="https://www.plumed.org/" target="_blank">https://www.plumed.org/</a>。在其的官网上有丰富的<a href="https://plumed-school.github.io/browse.html" target="_blank">案例</a>可以学习。对于分子动力学模拟而言，计算自由能的一般思路是根据分子动力学模拟获得的轨迹建立统计直方图并估算概率的方法来计算分子不同状态间的自由能差。例如，在温度为<span class="arithmatex">\(T\)</span>下，体系有两种状态A与B。根据分子动力学模拟获得的轨迹可以计算体系处于状态A与B的概率分别为<span class="arithmatex">\(p_{A}\)</span>与<span class="arithmatex">\(p_{B}\)</span>，那么体系从A转化到B的自由能变化<span class="arithmatex">\(\Delta\)</span><span class="arithmatex">\(G_{A \rightarrow B}\)</span>为：
+$$
+    \Delta G_{A \rightarrow B} = G_{B} - G_{A} = - k_{B} T \ln \frac{p_{B}}{p_{A}}
+$$
+上式中<span class="arithmatex">\(k_{B}\)</span>为玻尔兹曼常数。对于上式而言，若A转换到B的能垒很大时，则在可接受的模拟时间尺度内，在轨迹中观察到大量的从A到B的转化是相当困难的。这将会导致无法准确统计<span class="arithmatex">\(p_{A}\)</span>与<span class="arithmatex">\(p_{B}\)</span>，从而影响计算的准确性。</p>
+<div class="admonition note">
+<p class="admonition-title">注意</p>
+<p>目前，超算上有两个版本的<code>PLUMED</code>供大家使用。一个版本是<strong>打了<code>PLUMED</code>补丁的<code>GROMACS</code></strong>，另一个是<strong>单独的<code>PLUMED</code></strong>。对于打了<code>PLUMED</code>补丁的<code>GROMACS</code>，该版本的<code>PLUMED</code>主要用来进行实施模拟过程中的增强采样操作，而对于单独的<code>PLUMED</code>，该版本主要用来实施<code>GROMACS</code>已经模拟完成获得轨迹后的轨迹分析操作。</p>
+</div>
+<h3 id="plumedgromacs">打了<code>PLUMED</code>补丁的<code>GROMACS</code>的使用方法</h3>
+<p>打了<code>PLUMED</code>补丁的<code>GROMACS</code>主要用来在<code>GROMACS</code>模拟的过程中调用<code>PLUMED</code>而计算自由能。若需要调用<code>PLUMED</code>，需要给<code>PLUMED</code>传入一个输入文件(下列叙述中<code>PLUMED</code>的输入文件名默认为<code>plumed.dat</code>)。<code>plumed.dat</code>中确定了需要<code>PLUMED</code>完成的计算任务，相关字段可参见<a href="../../file/plumed-manual.pdf" target="_blank"><code>PLUMED</code>手册</a>。由于<code>PLUMED</code>中进行增强采样的算法有很多，因此这里不展开进行叙述。下面举一个关于打了<code>PLUMED</code>补丁的<code>GROMACS</code>的使用方法的例子。</p>
+<ul>
+<li>背景介绍</li>
+</ul>
+<p>利用亚纳米孔道进行离子分离是目前的一个研究热点。由于亚纳米孔道的尺寸很小，因此离子并不容易进入孔道中。这导致大部分离子都处于亚纳米孔道外侧，而亚纳米孔道中离子出现的概率较少。而为了研究离子在孔道中的相关性质，我们就必须使用增强采样技术将离子推进孔道中，以此来提高采样的准确性和充分性。</p>
+<ul>
+<li>实施细节</li>
+</ul>
+<p>下图是不采用和采用增强采样获得的离子在不同区域出现的频率。
+<br />
+<div style='text-align:center'><img src='../../img/plumed_2.png' alt='此图无法显示' /></div></p>
+<div style='text-align:center'>离子在不同区域出现的频率</div>
+<p>上述结果说明，当采用增强采样后，离子在孔道内外出现的频率无明显的差别。上述结果是在<code>PLUMED</code>中进行SMD(Steered MD)获得的。完成该任务的<code>plumed.dat</code>文件示例内容如下：
+  <div class="language-text highlight"><span class="filename">plumed.dat文件示例</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># 选出index.ndx文件中MOL组中的所有原子，需要注意的是该路径下一定要存在index.ndx文件，否则会报错
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>channel: GROUP NDX_FILE=index.ndx NDX_GROUP=MOL
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a># 获得channel这个整体的质心
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>c1: CENTER ATOMS=channel
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a># 获得1号原子与channel这个整体的质心之间的距离，不使用周期性边界条件
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>d: DISTANCE ATOMS=c1,1 NOPBC COMPONENTS
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a># 设定SMD的相关设置
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>restraint: ...
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      MOVINGRESTRAINT
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      # 需要施加偏置势的量为距离在z方向上的分量
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      ARG=d.z
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      # 第0步时，距离在z方向上的分量的理想值为1 nm，施加的偏置势为0 kJ/mol/nm^2
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>      AT0=1    STEP0=0      KAPPA0=0
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      # 第5000步时，距离在z方向上的分量的理想值为1 nm，施加的偏置势为1000 kJ/mol/nm^2
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      # 在0步至5000步中，偏置势线性增加
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>      AT1=1    STEP1=5000   KAPPA1=1000
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      # 在第10000步，距离在z方向上的分量的理想值为-1 nm，施加的偏置势为1000 kJ/mol/nm^2
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>      AT2=-1   STEP2=10000  KAPPA2=1000
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>...
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a># 输出相关物理量至COLVAR文件中，每10000步输出一次
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>PRINT STRIDE=10000 ARG=* FILE=COLVAR
+</span></code></pre></div>
+  按照常规的做法在虚拟机中获得<code>GROMACS</code>的tpr文件后，可在超算中利用<code>Gmx_Plu.sh</code>命令调用打了<code>PLUMED</code>补丁的<code>GROMACS</code>。<br/>
+  <code>Gmx_Plu.sh</code>命令的使用方法如下：<br/>
+  <code>Gmx_Plu.sh [name of .tpr file] [name of PLUMED input file]</code><br/>
+  例如：<code>Gmx_Plu.sh test.tpr plumed.dat</code></p>
+<div class="admonition info inline end">
+<p class="admonition-title">温馨提示</p>
+<p>若不需要在模拟过程中调用<code>PLUMED</code>，请使用<code>SubGmx.sh</code>命令提交计算任务，不要使用<code>Gmx_Plu.sh</code>命令提交计算任务，否则运算的性能会受到损失。</p>
+</div>
+<h3 id="plumed">单独的<code>PLUMED</code>的使用方法</h3>
+<p><code>PLUMED</code>单独使用一般用于<code>GROMACS</code>模拟完成得到轨迹后，对轨迹的分析。下面是一个简单的例子。</p>
+<ul>
+<li>背景介绍</li>
+</ul>
+<p>为探究某种化学物种在孔道中的分布，探究其在不同时间下距离孔道中轴线之间的距离是非常有必要的。该例子就是来计算这个量的。</p>
+<ul>
+<li>实施细节</li>
+</ul>
+<p><code>plumed.dat</code>文件示例内容如下：
+  <div class="language-text highlight"><span class="filename">plumed.dat文件示例</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># 从index.ndx中读取这种化学物种
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ion: GROUP NDX_FILE=index.ndx NDX_GROUP=ion
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># 从index.ndx中读取孔道原子
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>MOL: GROUP NDX_FILE=index.ndx NDX_GROUP=MOL
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a># 获得孔道的质心
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>c1: CENTER ATOMS=MOL 
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a># 求这种化学物种与孔道质心之间的平均距离(只保留XY方向上的分量，舍弃Z方向上的分量)
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>d1: XYDISTANCES GROUPA=ion GROUPB=c1 MEAN
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a># 输出计算结果
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>PRINT ARG=d1.mean STRIDE=1000 FILE=COLVAR
+</span></code></pre></div>
+  随后，在含有要分析的<code>GROMACS</code>的xtc文件所在的目录执行<code>SubPlu.sh</code>命令即可单独使用<code>Plumed</code>。<br/>
+  <code>SubPlu.sh</code>命令的使用方法如下：<br/>
+  <code>SubPlu.sh [name of .xtc file] [name of PLUMED input file]</code><br/>
+  例如：<code>SubPlu.sh test.xtc plumed.dat</code></p>
+<div class="admonition note">
+<p class="admonition-title">注意</p>
+<p><code>SubPlu.sh</code>命令执行<code>PLUMED</code>时并未调用<code>GPU</code>，因此可能会有一些慢。只要输出的文件中一直有数据在更新就没问题。出现以下类似的内容说明<code>PLUMED</code>计算完成。
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>PLUMED: 1 Prepare dependencies                        500001     0.137395     0.000000     0.000000     0.000185
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>PLUMED: 2 Sharing data                                   501     0.006504     0.000013     0.000006     0.000182
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>PLUMED: 3 Waiting for data                               501     0.001033     0.000002     0.000000     0.000008
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>PLUMED: 4 Calculating (forward loop)                     501     0.062603     0.000125     0.000091     0.000405
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>PLUMED: 5 Applying (backward loop)                       501     0.009490     0.000019     0.000016     0.000029
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>PLUMED: 6 Update 
+</span></code></pre></div></p>
+</div>
+<h3 id="_1">参考材料</h3>
+<p>[1] <a href='https://www.plumed.org/doc-v2.8/user-doc/html/belfast-5.html' target='_blank'>Belfast tutorial: Out of equilibrium dynamics</a><br/>
+[2] <a href='../../file/plumed-manual.pdf' target='_blank'>PLUMED手册</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<h2 id="__comments">评论</h2>
+<script src="https://giscus.app/client.js" data-repo="luck19990920/Docs_of_Jian.github.io" data-repo-id="R_kgDOMSXAIQ" data-category="Announcements" data-category-id="DIC_kwDOMSXAIc4Cgl4b" data-mapping="pathname" data-strict="0" data-reactions-enabled="1"
+    data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async>
+</script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ?
+            "transparent_dark" :
+            "light"
+
+        // Instruct Giscus to set theme
+        giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function() {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ?
+                    "transparent_dark" :
+                    "light"
+
+                // Instruct Giscus to change theme
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage({
+                        giscus: {
+                            setConfig: {
+                                theme
+                            }
+                        }
+                    },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+                
               </article>
             </div>
           
@@ -914,12 +1192,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["search.highlight", "content.code.copy", "content.code.select", "navigation.tracking", "navigation.tabs", "navigation.top", "search.suggest", "search.share"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "content.code.copy", "content.code.select", "navigation.tracking", "navigation.tabs", "navigation.top", "search.suggest", "search.share"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
-        <script src="/javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
