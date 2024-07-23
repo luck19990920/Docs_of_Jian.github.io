@@ -27,8 +27,9 @@ markdown_extensions:
       generic: true
 
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+
       
 theme:
   name: material
@@ -81,6 +82,7 @@ nav:
       - 计算化学/量子化学/ORCA的使用.md
       - 计算化学/量子化学/ORCA与Multiwfn计算RESP电荷脚本分析.md
       - 计算化学/量子化学/Hessian矩阵的相关理解.md
+      - 计算化学/量子化学/关于结构在坐标系中进行旋转相关问题的讨论.md
     - 分子动力学模拟:
       - 计算化学/分子动力学模拟/GROMACS的使用.md
       - 计算化学/分子动力学模拟/PLUMED的使用.md
