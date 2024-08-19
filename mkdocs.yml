@@ -34,22 +34,22 @@ extra_javascript:
 theme:
   name: material
   language: zh
-  palette:
-    # Palette toggle light mode
-    - scheme: default
-      # Set primary color used for header light blue
-      primary: indigo
-      accent: cyan
-      toggle:
-        icon: material/weather-night
-        name: 切换至夜间模式
+  # palette:
+  #   # Palette toggle light mode
+  #   - scheme: default
+  #     # Set primary color used for header light blue
+  #     primary: indigo
+  #     accent: cyan
+  #     toggle:
+  #       icon: material/weather-night
+  #       name: 切换至夜间模式
 
-    # Palette toggle for dark mode
-    - scheme: slate
-      accent: cyan
-      toggle:
-        icon: material/weather-sunny
-        name: 切换至日间模式
+  #   # Palette toggle for dark mode
+  #   - scheme: slate
+  #     accent: cyan
+  #     toggle:
+  #       icon: material/weather-sunny
+  #       name: 切换至日间模式
 
     
   icon:
@@ -91,6 +91,7 @@ nav:
       - CS/fluent_python/chapter_2.md
     - 杂记:
       - CS/杂记/easy-Shermo程序编写思路理解.md
+      - CS/杂记/CPython杂记1.md
   - 相关材料:
     - 相关材料/相关材料.md
 
