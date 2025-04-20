@@ -1,108 +1,46 @@
 site_name: Docs of Jian
+site_description: A blogging site by Jian
+site_url: http://99092019.xyz
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  palette:
+  # Dark Mode
+  - scheme: slate
+    toggle:
+      icon: material/weather-sunny
+      name: 切换至日间模式
+    primary: deep orange
+    accent: deep purple
+
+  # Light Mode
+  - scheme: default
+    toggle:
+      icon: material/weather-night
+      name: 切换至夜间模式
+    primary: deep purple
+    accent: deep orange
+
+plugins:
+  - search
+  - blog:
+      blog_dir: .
+      post_url_format: "{slug}"
+  - tags:
+      tags_file: tags.md
+  
 
 markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
   - admonition
   - pymdownx.details
   - pymdownx.superfences
 
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  
-  - pymdownx.arithmatex:
-      generic: true
-
-extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
-
-      
-theme:
-  name: material
-  language: zh
-  # palette:
-  #   # Palette toggle light mode
-  #   - scheme: default
-  #     # Set primary color used for header light blue
-  #     primary: indigo
-  #     accent: cyan
-  #     toggle:
-  #       icon: material/weather-night
-  #       name: 切换至夜间模式
-
-  #   # Palette toggle for dark mode
-  #   - scheme: slate
-  #     accent: cyan
-  #     toggle:
-  #       icon: material/weather-sunny
-  #       name: 切换至日间模式
-
-    
-  icon:
-    admonition:
-      note: fontawesome/solid/note-sticky
-
-
-  features:
-    - search.highlight
-    - content.code.copy
-    - content.code.select
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.top
-    - search.suggest
-    - search.share
-
-  icon:
-    repo: fontawesome/brands/github
-
-  custom_dir: overrides
-
-plugins:
-  - search
-  
-nav:
-  - index.md
-  - 计算化学:
-    - 量子化学:
-      - 计算化学/量子化学/ORCA的使用.md
-      - 计算化学/量子化学/ORCA与Multiwfn计算RESP电荷脚本分析.md
-      - 计算化学/量子化学/Hessian矩阵的相关理解.md
-      - 计算化学/量子化学/关于结构在坐标系中进行旋转相关问题的讨论.md
-    - 分子动力学模拟:
-      - 计算化学/分子动力学模拟/GROMACS的使用.md
-      - 计算化学/分子动力学模拟/PLUMED的使用.md
-  - 计算机科学:
-    - Fluent Python:
-      - CS/fluent_python/chapter_2.md
-    - 杂记:
-      - CS/杂记/easy-Shermo程序编写思路理解.md
-      - CS/杂记/CPython杂记1.md
-  - 相关材料:
-    - 相关材料/相关材料.md
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/luck19990920
-
-copyright: Copyright &copy; 2024 Jian Zhang
-repo_url: https://github.com/luck19990920/Docs_of_Jian.github.io
-repo_name: Docs_of_Jian.github.io
+copyright: Copyright &copy; 2024 - 2025 Jian Zhang
+repo_url: https://github.com/luck19990920
+repo_name: Docs_of_Jian.github
 use_directory_urls: false
-
-
