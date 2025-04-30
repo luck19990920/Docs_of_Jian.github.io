@@ -6,6 +6,7 @@ tags:
     - Computational Chemistry
     - Molecular Dynamics Simulation
 comments: true
+draft: true
 ---
 
 # modGro的使用方法
@@ -16,9 +17,63 @@ comments: true
 
 ### modGro的简要介绍
 
-modGro是专门用于处理GROMACS生成的`gro`文件的工具。modGro可在其[主页](https://github.com/luck19990920/Scripts/tree/master/modGro){:target="_blank"}上进行下载。下载得到的文件夹中，`modGro`是在Linux系统中的可执行文件，`modGro.exe`为在Windows系统中的可执行文件。modGro支持修改gro文件中特定的残基名和原子名、删除特定的残基、复制特定的残基、对残基进行位置变换和合并多个gro文件等操作。以下通过一些例子来说明modGro的使用方法。文中涉及到的文件可在[此处](./files.zip)下载。
+modGro是专门用于处理GROMACS生成的gro文件的工具。modGro可在其[主页](https://github.com/luck19990920/Scripts/tree/master/modGro){:target="_blank"}上进行下载。下载得到的文件夹中，`modGro`是在Linux系统中的可执行文件，`modGro.exe`为在Windows系统中的可执行文件。modGro支持修改gro文件中特定的残基名和原子名、删除特定的残基、复制特定的残基、对残基进行平移和合并多个gro文件等操作。文中涉及到的文件可在[此处](./files.zip)下载。
 
-### 例子1：修改特定的残基名与原子名
+### modGro的主要功能
+
+将gro文件载入modGro后，会出现如下的菜单选项。
+```
+ 1 Show residue information
+ 2 Modify the residue or atom names
+ 3 Translate selected residues according to a translation vector
+ 4 Clone residues         5 Remove residues
+ 6 Set cell information
+ 7 Merge multiple .gro file
+ 8 Display the coordinate range of the selected residue
+ 9 Output current structure to .gro file
+```
+下面将逐一的讲解各选项的含义。
+
+* 选项`1 Show residue information`
+
+该选项主要用于将gro文件中的内容(除了原子个数信息和盒子信息以外的部分)展示在屏幕上，便于检查。键入`1`即可进入该选项。进入该选项后，键入不同的数字则可以用不同的方式筛选出需要展示在屏幕上的残基或原子的信息。例如，键入`1`则可以将gro文件中所有的残基信息展示在屏幕上，键入`2`则可以将gro文件中特定序号的残基(残基的序号从1开始)信息展示在屏幕上，而键入`3`则可以将gro文件中特定序号的原子(原子的序号从1开始)信息展示在屏幕上。
+
+* 选项`2 Modify the residue or atom names`
+  
+该选项主要用于修改gro文件中特定的残基名或原子名。键入`2`即可进入该选项。进入该选项后，键入不同的数字则可对特定序号的残基名或原子名进行修改。
+
+* 选项`3 Translate selected residues according to a translation vector`
+  
+该选项主要用于将gro文件中特定的残基进行平移的操作。
+
+* 选项`4 Clone residues`
+  
+该选项主要用于将gro文件中特定的残基进行复制。复制得到的残基还在其原位置。因此，对残基进行复制操作后往往需要对残基进行平移操作。
+
+* 选项`5 Remove residues`
+  
+该选项与选项`4`相对，主要用于将gro文件中特定的残基进行删除。
+
+* 选项`6 Set cell information`
+  
+该选项主要用来修改盒子的大小。键入`6`后即可进入该选项。随后需依次输入确定盒子大小的三个矢量。
+
+* 选项`7 Merge multiple .gro file`
+  
+该选项主要用来合并多个gro文件。
+
+* 选项`8 Display the coordinate range of the selected residue`
+  
+该选项主要用来计算得到特定残基中原子坐标在x/y/z方向上的最大值与最小值。
+
+* 选项`9 Output current structure to .gro file`
+  
+该选项主要用来输出信息至gro文件中
+
+### 相关例子
+
+* 例子1：修改特定的残基名与原子名
+  
 `solv.gro`为一个含有528个水分子的gro文件。打开modGro后，依次键入如下的内容(`//`后的是注释)可以将1,2,9-30号残基的名字改为`MOL`。
 ```
 solv.gro                 // 载入solv.gro
@@ -47,7 +102,9 @@ fix-2.gro                // 输出到fix-2.gro
 q                        // 退出程序
 ```
 此时，序号为1,10,18-20的残基中的第一个原子的原子名已经由`OW`被修改为`HA`。修改后的结构被保存到`fix-2.gro`文件中。
-### 例子2：将单层COF结构拓展成多层COF结构
+
+* 例子2：将单层COF结构拓展成多层COF结构
+
 `COF.gro`为某一COF材料的gro文件(如下图所示)。我们的目标是采用modGro将该单层COF结构拓展成5层COF结构，并且层与层之间的间距为5埃。
 <figure markdown="span">
   ![](COF-1.bmp){ width="600" }
@@ -169,7 +226,8 @@ q                    // 退出程序
   ![](COF-2.bmp){ width="500" }
 </figure>
 
-### 例子3：对多个gro文件进行合并
+* 例子3：对多个gro文件进行合并
+
 本例子将在例子2的基础上沿着z轴在COF结构的左侧添加水溶液。`solv.gro`为一个三边尺寸分别为22.50600，38.98150和20(单位为埃)的水盒子。首先，将`solv.gro`利用modGro把其z方向的盒子尺寸由20埃变为50埃(因为上述得到的`fix.gro`的z方向上的盒子尺寸为30埃)。执行该操作可键入如下的内容(`//`后的是注释)：
 ```
 solv.gro                  // 载入solv.gro文件
@@ -228,7 +286,7 @@ q                            // 退出程序
 </figure>
 
 ### 附：对于modGro内部实现的一些说明
-
+#### 2.0版本
 modGro的实现过程中采用了面向对象编程(OOP)的方法。在这之中，存在三个类，并且这三个类是层层继承的关系。`reside`类中使用到了`def_vector`类的相关性质，而`GRO`类中使用到了`reside`类的相关性质，如下图所示。
 <figure markdown="span">
   ![](class.png){ width="500" }
@@ -239,9 +297,18 @@ modGro的实现过程中采用了面向对象编程(OOP)的方法。在这之中
 * `reside`：单个残基的类。`gro`文件中的每一个残基都为该类的一个实例。该类中有三个属性，分别为`resname`(该残基的残基名)、`atom_name_reside`(残基中的原子名数组)与`coordinate_reside`(残基中的原子坐标数组)。在这之中，`coordinate_reside`中的每一个元素都为`def_vector`实例。
 * `GRO`：gro文件的类。该类主要用于将gro文件中的盒子信息、残基序号、残基名、原子名和原子坐标等信息组织起来。
 
-`GRO`类中保存`gro`文件中的信息采用了关联数组(即字典)。键为残基的序号，而值为残基的信息。如下图所示。
+`GRO`类中保存`gro`文件中的信息采用了关联数组(即**字典**)。键为残基的序号，而值为残基的信息。如下图所示。
 <figure markdown="span">
   ![](class-1.png){ width="500" }
 </figure>
 
-
+#### 2.1版本
+2.1版本与2.0版本最大的区别在于`gro`文件中的信息采用**链表**进行存储。程序中所使用链表的节点结构如下图所示。
+<figure markdown="span">
+  ![](node.png){ width="400" }
+</figure>
+链表的节点主要包括两个部分。前一个部分存储一个`reside`对象的指针，而后一个部分存储一个指向下一个节点的指针。这样，就形成了下面的链表结构。
+<figure markdown="span">
+  ![](list.png){ width="800" }
+</figure>
+该链表的头节点由指针`head_ptr`所指，而尾节点由指针`end_ptr`所指。链表中每一个残基出现的先后顺序决定了其的残基序号。
