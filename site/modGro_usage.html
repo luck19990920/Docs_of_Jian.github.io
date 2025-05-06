@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="http://blog.99092019.xyz/gromacs%E7%9A%84%E4%BD%BF%E7%94%A8.html">
+        <link rel="canonical" href="http://blog.99092019.xyz/modGro_usage.html">
       
       
-        <link rel="prev" href="orca%E7%9A%84%E4%BD%BF%E7%94%A8.html">
+        <link rel="prev" href="single_cycle.html">
       
-      
-        <link rel="next" href="%E5%8D%95%E5%91%A8%E6%9C%9F%E5%BE%AE%E6%9E%B6%E6%9E%84%E7%9A%84%E5%AE%9E%E7%8E%B0risc-v%E6%8C%87%E4%BB%A4%E9%9B%86.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>GROMACS的使用 - Docs of Jian</title>
+        <title>modGro的使用方法 - Docs of Jian</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gromacs" class="md-skip">
+        <a href="#modgro" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GROMACS的使用
+              modGro的使用方法
             
           </span>
         </div>
@@ -499,46 +497,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#modgro_1" class="md-nav__link">
     <span class="md-ellipsis">
-      建模
+      modGro的简要介绍
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gromacs_1" class="md-nav__link">
+  <a href="#modgro_2" class="md-nav__link">
     <span class="md-ellipsis">
-      GROMACS模拟
+      modGro的主要功能
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="GROMACS模拟">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关例子
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modgro_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      modGro以命令行的方式运行
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="modGro以命令行的方式运行">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#modgrogrogro" class="md-nav__link">
     <span class="md-ellipsis">
-      能量极小化
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      平衡相
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      产生相
+      采用modGro调整gro文件为规范的gro文件
     </span>
   </a>
   
@@ -550,11 +548,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#modgro_4" class="md-nav__link">
     <span class="md-ellipsis">
-      数据分析与处理
+      附：对于modGro内部实现的一些说明
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="附：对于modGro内部实现的一些说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0版本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1版本
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -595,7 +617,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2024-10-21 00:00:00+00:00" class="md-ellipsis">2024年10月21日</time>
+                        <time datetime="2025-04-26 00:00:00+00:00" class="md-ellipsis">2025年4月26日</time>
                       </div>
                     </li>
                     
@@ -617,7 +639,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              需要 2 分钟阅读时间
+                              需要 5 分钟阅读时间
                             
                           </span>
                         </div>
@@ -659,137 +681,272 @@
   
 
 
-<h1 id="gromacs">GROMACS的使用</h1>
-<p>本篇文章主要用于说明分子动力学模拟软件GROMACS的使用方法。</p>
+<h1 id="modgro">modGro的使用方法</h1>
+<p>本篇文章主要用于说明modGro的使用方法。</p>
 <!-- more -->
 
-<p>GROMACS是由荷兰格罗宁根大学开发，1991年发布最初版本。目前由瑞典皇家理工学院和乌普萨拉大学维护。GROMACS的官网为<a href="https://www.gromacs.org/" target="_blank">https://www.gromacs.org/</a>。分子动力学模拟的一般步骤如下：</p>
+<h3 id="modgro_1">modGro的简要介绍</h3>
+<p>modGro是专门用于处理GROMACS生成的gro文件的工具。modGro可在其<a href="https://github.com/luck19990920/Scripts/tree/master/modGro" target="_blank">主页</a>上进行下载。下载得到的文件夹中，<code>modGro</code>是在Linux系统中的可执行文件，<code>modGro.exe</code>为在Windows系统中的可执行文件。modGro支持修改gro文件中特定的残基名和原子名、删除特定的残基、复制特定的残基、对残基进行平移和合并多个gro文件等操作。文中涉及到的文件可在<a href="MD/files.zip">此处</a>下载。</p>
+<h3 id="modgro_2">modGro的主要功能</h3>
+<p>将gro文件载入modGro后，会出现如下的菜单选项。
+<div class="highlight"><pre><span></span><code> 1 Show residue information
+ 2 Modify the residue or atom names
+ 3 Translate selected residues according to a translation vector
+ 4 Clone residues         5 Remove residues
+ 6 Set cell information
+ 7 Merge multiple .gro file
+ 8 Display the coordinate range of the selected residue
+ 9 Output current structure to .gro file
+</code></pre></div>
+下面将逐一的讲解各选项的含义。</p>
+<ul>
+<li>选项<code>1 Show residue information</code></li>
+</ul>
+<p>该选项主要用于将gro文件中的内容(除了原子个数信息和盒子信息以外的部分)展示在屏幕上，便于检查。键入<code>1</code>即可进入该选项。进入该选项后，键入不同的数字则可以用不同的方式筛选出需要展示在屏幕上的残基或原子的信息。例如，键入<code>1</code>则可以将gro文件中所有的残基信息展示在屏幕上，键入<code>2</code>则可以将gro文件中特定序号的残基(残基的序号从1开始)信息展示在屏幕上，而键入<code>3</code>则可以将gro文件中特定序号的原子(原子的序号从1开始)信息展示在屏幕上。</p>
+<ul>
+<li>选项<code>2 Modify the residue or atom names</code></li>
+</ul>
+<p>该选项主要用于修改gro文件中特定的残基名或原子名。键入<code>2</code>即可进入该选项。进入该选项后，键入不同的数字则可对特定序号的残基名或原子名进行修改。</p>
+<ul>
+<li>选项<code>3 Translate selected residues according to a translation vector</code></li>
+</ul>
+<p>该选项主要用于将gro文件中特定的残基进行平移的操作。</p>
+<ul>
+<li>选项<code>4 Clone residues</code></li>
+</ul>
+<p>该选项主要用于将gro文件中特定的残基进行复制。复制得到的残基还在其原位置。因此，对残基进行复制操作后往往需要对残基进行平移操作。</p>
+<ul>
+<li>选项<code>5 Remove residues</code></li>
+</ul>
+<p>该选项与选项<code>4</code>相对，主要用于将gro文件中特定的残基进行删除。</p>
+<ul>
+<li>选项<code>6 Set cell information</code></li>
+</ul>
+<p>该选项主要用来修改盒子的大小。键入<code>6</code>后即可进入该选项。随后需依次输入确定盒子大小的三个矢量。</p>
+<ul>
+<li>选项<code>7 Merge multiple .gro file</code></li>
+</ul>
+<p>该选项主要用来合并多个gro文件。</p>
+<ul>
+<li>选项<code>8 Display the coordinate range of the selected residue</code></li>
+</ul>
+<p>该选项主要用来计算得到特定残基中原子坐标在x/y/z方向上的最大值与最小值。</p>
+<ul>
+<li>选项<code>9 Output current structure to .gro file</code></li>
+</ul>
+<p>该选项主要用来输出信息至gro文件中</p>
+<h3 id="_1">相关例子</h3>
+<ul>
+<li>例子1：修改特定残基的残基名与残基中的原子名</li>
+</ul>
+<p><code>solv.gro</code>为一个含有528个水分子的gro文件。打开modGro后，依次键入如下的内容(<code>//</code>后的是注释)可以将1,2,9-30号残基的名字改为<code>MOL</code>。
+<div class="highlight"><pre><span></span><code>solv.gro                 // 载入solv.gro
+2                        // 修改残基名或原子名
+1                        // 修改残基名
+1,2,9-30                 // 需要修改的残基序号为1,2,9-30(残基序号从1开始)
+MOL                      // 修改的残基名为MOL
+0                        // 返回主菜单
+9                        // 输出gro文件
+C:\Users\fix-1.gro       // 输出到C:\Users\fix-1.gro
+q                        // 退出程序
+</code></pre></div>
+此时，序号为1,2,9-30的残基的残基名已经由<code>SOL</code>被修改为<code>MOL</code>。修改后的结构被保存到<code>fix-1.gro</code>文件中。</p>
+<p>还是对于<code>solv.gro</code>文件，打开modGro后，依次键入如下的内容可以将1,10,18-20号残基中的第一个原子的原子名修改为<code>HA</code>。
+<div class="highlight"><pre><span></span><code>solv.gro                 // 载入solv.gro
+2                        // 修改残基名或原子名
+2                        // 修改原子名
+2                        // 根据残基序号进行修改
+1,10,18-20               // 需要修改的残基序号为1,10,18-20(残基序号从1开始)
+1                        // 修改残基中的第一个原子的原子名
+HA                       // 修改成的原子名为HA
+0                        // 返回主菜单
+9                        // 输出gro文件
+C:\Users\fix-2.gro       // 输出到C:\Users\fix-2.gro
+q                        // 退出程序
+</code></pre></div>
+此时，序号为1,10,18-20的残基中的第一个原子的原子名已经由<code>OW</code>被修改为<code>HA</code>。修改后的结构被保存到<code>fix-2.gro</code>文件中。</p>
+<ul>
+<li>例子2：将单层COF结构拓展成多层COF结构</li>
+</ul>
+<p><code>COF.gro</code>为某一COF材料的gro文件(如下图所示)。我们的目标是采用modGro将该单层COF结构拓展成5层COF结构，并且层与层之间的间距为5埃。</p>
 <figure>
-  <img alt="" src="MD/md.png" width="1000" />
+  <img alt="" src="MD/COF-1.bmp" width="600" />
 </figure>
-<h3 id="_1">建模</h3>
-<p>目前建模的方式主要有以下的几种方法：</p>
-<ul>
-<li><strong>采用Packmol进行建模</strong></li>
-</ul>
-<p><code>Packmol</code>是一个免费的、构建分子动力学模拟初始结构的工具。关于<code>Packmol</code>的使用，可参考<a href="http://sobereva.com/473" target="_blank">分子动力学初始结构构建程序Packmol的使用</a>。另外，本网页也提供了<a href="MD/Packmol_user_guide.pdf" target="_blank">使用手册</a>。</p>
-<hr />
-<ul>
-<li><strong>采用GROMACS中的命令进行建模</strong></li>
-</ul>
-<p>在GROMACS中，常用的进行建模的命令如下：</p>
-<ol>
-<li>
-<p><code>gmx solvate</code>命令：生成一个充满指定分子的盒子，默认添加的分子为SPC水分子。</p>
-<p>下面是一些例子：</p>
-<ul>
-<li><code>gmx solvate -box 2 4 4 -o test.gro</code></li>
-</ul>
-<p>参数<code>-box 2 4 4</code>为设定盒子的大小为<code>2*4*4</code>(单位nm)，参数<code>-o test.gro</code>为填充后粒子的坐标信息输出到<code>test.gro</code>文件中。综上，这条命令使用水分子填充一个大小为<code>2*4*4</code>(单位nm)的盒子，并将填充好的结构文件输出到<code>test.gro</code>文件中。</p>
-<ul>
-<li><code>gmx solavte -cp CL.gro -o solv.gro</code></li>
-</ul>
-<p>参数<code>-cp CL.gro</code>的含义是填充水的体系是<code>CL.gro</code>这个文件所描述的体系。参数<code>-o solv.gro</code>的含义是填充后的结构信息输出到<code>solv.gro</code>这个文件中。</p>
-</li>
-<li>
-<p><code>gmx insert-molecules</code>命令：将指定分子插入体系空隙中，或填充一个指定分子的盒子。</p>
-<p>下面是一个例子：<br/>
- <code>gmx insert-molecules -f test.gro -ci CL.pdb -o out.gro -nmol 55</code></p>
-<p>参数<code>-f test.gro</code>的含义是需要在<code>test.gro</code>对应的这个体系中插入分子。参数<code>-ci CL.pdb</code>为插入分子的结构文件(例如这里插入的是Cl离子，那么<code>CL.pdb</code>为一个Cl离子的结构)在<code>test.gro</code>。参数<code>-o out.gro</code>为插入后的结构输出到<code>out.gro</code>。参数<code>-nmol 55</code>为插入的分子数量为55个。</p>
-</li>
-</ol>
-<hr />
-<ul>
-<li><strong>采用VMD进行建模</strong></li>
-</ul>
-<p>通常我们可以使用VMD对结构进行拼接，然后得到拼接之后的结构。在对多个结构进行拼接时，除了使用VMD完成，还可以使用<a href="https://github.com/luck19990920/Scripts/tree/master/modGro" target="_blank">modGro</a>完成。</p>
-<h3 id="gromacs_1">GROMACS模拟</h3>
-<p>该部分主要包括能量极小化(简称em)、平衡相(简称eq)和产生相(简称prod)三个部分。</p>
-<h4 id="_2">能量极小化</h4>
-<p>能量极小化的目的是消除模型中严重不合理的接触。其有两种常用算法：最陡下降法(Steepest Decent Method)与共轭梯度法(Conjugated Gradient Method)。一般来说，对于难以能量极小化的体系建议先使用最陡下降法，然后再使用共轭梯度法。该步的<code>mdp</code>文件如下：
-<div class="highlight"><span class="filename">先采用最陡下降法</span><pre><span></span><code>define = -DFLEXIBLE
-integrator = steep                ;use steepest decent method
-nsteps = 10000
-emtol  = 1000.0
-emstep = 0.01
-;
-nstxout   = 100
-nstlog    = 50
-nstenergy = 50
-;
-pbc = xyz
-cutoff-scheme            = Verlet
-coulombtype              = PME
-rcoulomb                 = 1.0
-vdwtype                  = Cut-off
-rvdw                     = 1.0
-DispCorr                 = EnerPres
-;
-constraints              = none
+<p>首先，双击点开<code>modGro.exe</code>，然后将<code>COF.gro</code>拖进窗口中并回车。窗口中将显示如下的gro文件信息。
+<div class="highlight"><pre><span></span><code>Cell information
+In Angstrom:
+Cell vector 1,  X=  22.50600  Y=   0.00000  Z=   0.00000  Norm=  22.50600
+Cell vector 2,  X=   0.00000  Y=  38.98150  Z=   0.00000  Norm=  38.98150
+Cell vector 3,  X=   0.00000  Y=   0.00000  Z=  10.00000  Norm=  10.00000
+Cell angles:
+  Alpha=  90.00000  Beta=  90.00000  Gamma=  90.00000 degree
+  Total atoms:    240
+Total residue:    1
 </code></pre></div>
-<div class="highlight"><span class="filename">再采用共轭梯度法</span><pre><span></span><code>define = -DFLEXIBLE
-integrator = cg                    ;use conjugated gradient method
-nsteps = 10000
-emtol  = 100.0
-emstep = 0.01
-;
-nstxout   = 100
-nstlog    = 50
-nstenergy = 50
-;
-pbc = xyz
-cutoff-scheme            = Verlet
-coulombtype              = PME
-rcoulomb                 = 1.0
-vdwtype                  = Cut-off
-rvdw                     = 1.0
-DispCorr                 = EnerPres
-;
-constraints              = none
-</code></pre></div>
-对于一般的体系，可直接使用共轭梯度算法，该步的<code>mdp</code>文件如下：
-<div class="highlight"><span class="filename">直接采用共轭梯度法</span><pre><span></span><code>define = -DFLEXIBLE
-integrator = cg                    ;use conjugated gradient method
-nsteps = 10000
-emtol  = 100.0
-emstep = 0.01
-;
-nstxout   = 100
-nstlog    = 50
-nstenergy = 50
-;
-pbc = xyz
-cutoff-scheme            = Verlet
-coulombtype              = PME
-rcoulomb                 = 1.0
-vdwtype                  = Cut-off
-rvdw                     = 1.0
-DispCorr                 = EnerPres
-;
-constraints              = none
-</code></pre></div></p>
-<h4 id="_3">平衡相</h4>
-<p>该步的目的是使体系达到充分的平衡。关于如何判断体系是否平衡，详见<a href="http://sobereva.com/627" target="_blank">谈谈怎么判断分子动力学模拟是否达到了平衡</a>。</p>
-<h4 id="_4">产生相</h4>
-<p>该步的目的是产生出能够被用来统计所需属性的数据与轨迹。换句话说，分子动力学模拟所需的数据全部在该步中完成取样。</p>
+上述的文件信息表明：该gro文件中的盒子是正交的，并且盒子的三边长分别为22.50600埃、38.98150埃和10.00000埃。盒子三边的三个夹角都为90度。该gro文件中的原子总数为240，有1个残基。</p>
 <div class="admonition note">
-<p class="admonition-title">注意</p>
-<p>能量极小化请在虚拟机上完成。对于平衡相，若体系较小，建议在虚拟机中完成。若体系较大，建议在超算上完成。对于产生相，建议在超算中完成。</p>
+<p class="admonition-title">小贴士</p>
+<p>在Windows下，也可以不双击点开<code>modGro.exe</code>，而用鼠标左键将<code>COF.gro</code>放置到<code>modGro.exe</code>上面后放开鼠标左键。这样可以直接使<code>modGro.exe</code>载入<code>COF.gro</code>文件进行分析。在Linux下，可直接在命令行中输入<code>modGro test.gro</code>回车即可将<code>test.gro</code>载入<code>modGro</code>中。</p>
 </div>
-<div class="admonition info inline end">
-<p class="admonition-title">提示</p>
-<p>经测试，本课题组所用超算上运行一个gromacs任务当用一张显卡和4个核时效率最大。因此，<code>SubGmx.sh</code>运行每个任务用一张显卡和4个核。</p>
-</div>
-<p>在超算中，若需提交<code>GROMACS</code>计算任务，可使用<code>SubGmx.sh</code>命令。<code>SubGmx.sh</code>命令的使用方法如下：<br/>
-<code>SubGmx.sh [name of .tpr file]</code><br/>
-<code>SubGmx.sh</code>后接一个参数，该参数为需要运行的<code>GROMACS</code>的<code>tpr</code>文件。<code>tpr</code>文件一般在虚拟机中生成。</p>
-<h3 id="_5">数据分析与处理</h3>
-<p>对于一般的物理量，<code>GROMACS</code>中有自带的命令可以进行求解。较为常见的如下：</p>
+<p>在这里，操作思路是先将单层的COF结构复制4次，然后依次对这些单层的COF结构进行平移。为实现将单层的COF结构复制4次，首先键入<code>4</code>。然后再键入<code>1</code>即可对单层的COF膜复制一次。此时，屏幕上会显示残基个数和原子个数，如下所示。
+<div class="highlight"><pre><span></span><code>Well done. The current number of residues is 2. The current number of atoms is 480.
+</code></pre></div>
+按照上面的方法，再对1号残基复制3次即可得到5层COF结构。随后，对2号残基沿着z方向平移5埃，对3号残基沿着z方向平移10埃，对4号残基沿着z方向平移15埃，对5号残基沿着z方向平移20埃，并对盒子z方向上的尺寸进行适当的增加。执行该操作可键入如下的内容：
+<div class="highlight"><pre><span></span><code>3                    // 对特定的残基进行平移操作
+2                    // 对2号残基进行平移
+0,0,5                // 平移的矢量为0,0,5(单位为埃)
+3                    // 对特定的残基进行平移操作
+3                    // 对3号残基进行平移
+0,0,10               // 平移的矢量为0,0,10(单位为埃)
+3                    // 对特定的残基进行平移操作
+4                    // 对4号残基进行平移
+0,0,15               // 平移的矢量为0,0,15(单位为埃)
+3                    // 对特定的残基进行平移操作
+5                    // 对5号残基进行平移
+0,0,20               // 平移的矢量为0,0,20(单位为埃)
+6                    // 修改盒子尺寸
+22.50600,0,0         // 第一个轴对应的矢量为22.50600,0,0(单位为埃)
+0,38.98150,0         // 第二个轴对应的矢量为0,38.98150,0(单位为埃)
+0,0,30               // 第三个轴对应的矢量为0,0,30(单位为埃)
+9                    // 输出gro文件
+[回车]               // 输出到modGro.exe所在目录
+q                    // 退出程序
+</code></pre></div>
+此时，在<code>modGro.exe</code>所在目录下会生成<code>fix.gro</code>，该文件就是最终得到的gro文件。将该gro文件利用VMD可视化，如下图所示。此时COF结构已经由最初的1层拓展至5层，并且层与层之间的间隔为5埃。</p>
+<figure>
+  <img alt="" src="MD/COF-2.bmp" width="500" />
+</figure>
 <ul>
-<li><code>gmx msd</code>：计算均方位移</li>
-<li><code>gmx rdf</code>：计算径向分布曲线和配位数曲线</li>
+<li>例子3：对多个gro文件进行合并</li>
 </ul>
-<p>更多的命令请看<a href="MD/gmx-manual-2022.5.pdf" target="_blank">GROMACS手册</a>。此外，还可利用VMD进行数据分析或Python库(例如<a href='https://www.mdanalysis.org/' target="_blank">MDAnalysis</a>)进行分析。</p>
+<p>本例子将在例子2的基础上沿着z轴在COF结构的左侧添加水溶液。<code>solv.gro</code>为一个三边尺寸分别为22.50600，38.98150和20(单位为埃)的水盒子。首先，将<code>solv.gro</code>利用modGro把其z方向的盒子尺寸由20埃变为50埃(因为上述得到的<code>fix.gro</code>的z方向上的盒子尺寸为30埃)。执行该操作可键入如下的内容(<code>//</code>后的是注释)：
+<div class="highlight"><pre><span></span><code>solv.gro                  // 载入solv.gro文件
+6                         // 修改盒子尺寸
+22.50600,0,0              // 第一个轴对应的矢量为22.50600,0,0(单位为埃)
+0,38.98150,0              // 第二个轴对应的矢量为0,38.98150,0(单位为埃)
+0,0,50                    // 第三个轴对应的矢量为0,0,50(单位为埃)
+9                         // 输出gro文件
+extend_solv.gro           // 输出到extend_solv.gro文件中
+q                         // 退出程序
+</code></pre></div>
+将<code>extend_solv.gro</code>可视化如下所示。</p>
+<figure>
+  <img alt="" src="MD/COF-3.bmp" width="500" />
+</figure>
+<p>随后，修改<code>fix.gro</code>的盒子信息，使其与上述的<code>extend_solv.gro</code>中的盒子信息保持一致，并且将COF结构整体沿着z方向平移20埃。执行该操作可键入如下的内容：
+<div class="highlight"><pre><span></span><code>fix.gro                    // 载入fix.gro文件
+6                          // 修改盒子尺寸
+22.50600,0,0               // 第一个轴对应的矢量为22.50600,0,0(单位为埃)
+0,38.98150,0               // 第二个轴对应的矢量为0,38.98150,0(单位为埃)
+0,0,50                     // 第三个轴对应的矢量为0,0,50(单位为埃)
+3                          // 对残基进行平移
+[回车]                     // 对所有的残基进行平移
+0,0,20                     // 平移的矢量为0,0,20(单位为埃)
+4                          // 输出gro文件
+extend_fix.gro             // 输出到extend_fix.gro文件中
+q                          // 退出程序
+</code></pre></div>
+将<code>extend_fix.gro</code>可视化如下所示。</p>
+<figure>
+  <img alt="" src="MD/COF-4.bmp" width="500" />
+</figure>
+<div class="admonition info">
+<p class="admonition-title">注意</p>
+<p>若采用modGro合并盒子尺寸不同的多个gro文件并且不在modGro中修改盒子的尺寸，最终得到的盒子尺寸为载入的第一个gro文件中的盒子尺寸。</p>
+</div>
+<p>最后，将<code>extend_solv.gro</code>与<code>extend_fix.gro</code>使用<code>modGro</code>进行合并。执行该操作可键入如下的内容：
+<div class="highlight"><pre><span></span><code>extend_solv.gro              // 载入extend_solv.gro文件
+7                            // 合并gro文件
+extend_fix.gro               // 需要将extend_fix.gro进行合并
+q                            // 退出输入
+9                            // 输出gro文件
+merge.gro                    // 输出到merge.gro文件中
+q                            // 退出程序
+</code></pre></div>
+将<code>merge.gro</code>可视化如下所示。</p>
+<figure>
+  <img alt="" src="MD/COF-5.bmp" width="500" />
+</figure>
+<h3 id="modgro_3">modGro以命令行的方式运行</h3>
+<p>为保证modGro能够以命令行的方式运行，首先需要将modGro的可执行文件所在的目录添加至环境变量中。添加方式如下：</p>
+<ul>
+<li>对于Windows系统：打开控制面板→系统与安全→系统→高级系统设置→环境变量→将modGro的可执行文件所在的目录添加至系统变量下的Path中。</li>
+<li>对于Linux系统：运行<code>vi ~/.bashrc</code>命令，将export PATH=$PATH:/sob/workspace添加至文件末尾。其中<code>/sob/workspace</code>为modGro可执行文件所在的目录，需根据实际情况进行调整。</li>
+</ul>
+<p>完成上述的设置后，在Windows系统中任意目录下打开cmd(按Win+R键，然后输入<code>cmd</code>)后，键入<code>modGro</code>即可启动modGro。在Linux系统中任意目录下键入<code>modGro</code>即可启动modGro。modGro以命令行的方式运行可结合输入文件名，例如<code>modGro test.gro</code>。下面是以命令行方式运行modGro的一个例子。</p>
+<h4 id="modgrogrogro">采用modGro调整gro文件为规范的gro文件</h4>
+<p>gro文件中某几列的格式有特殊的要求。若不按照此要求组织gro文件，gromacs读取gro文件时将报错。下面的shell脚本实现了将目录下的所有gro文件规范化并输出。得到的以<code>-merge</code>结尾的gro文件即为modGro生成的规范的gro文件。</p>
+<div class="highlight"><span class="filename">在Linux中运行的Shell脚本</span><pre><span></span><code><span class="ch">#!/usr/bin/bash</span>
+
+<span class="nv">file_extend</span><span class="o">=</span><span class="s2">&quot;-merge&quot;</span><span class="w">  </span>
+
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.gro<span class="w"> </span>
+<span class="k">do</span>
+<span class="w">    </span><span class="nv">filename</span><span class="o">=</span><span class="si">${</span><span class="nv">file</span><span class="p">%.*</span><span class="si">}</span><span class="w">  </span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w">   </span>&gt;&gt;<span class="w">  </span>gro_file_1.txt<span class="w"> </span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;9&quot;</span><span class="w"> </span>&gt;&gt;<span class="w">  </span>gro_file_1.txt<span class="w"> </span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;./&quot;</span><span class="nv">$filename$file_extend</span><span class="s2">&quot;.gro&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>gro_file_1.txt
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;r&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>gro_file_1.txt
+<span class="k">done</span>
+
+sed<span class="w"> </span><span class="s1">&#39;$s/.*/q/&#39;</span><span class="w"> </span>gro_file_1.txt<span class="w"> </span>&gt;<span class="w"> </span>gro_file_2.txt
+rm<span class="w"> </span>gro_file_1.txt
+mv<span class="w"> </span>gro_file_2.txt<span class="w"> </span>gro_file.txt<span class="w"> </span>
+
+modGro<span class="w"> </span>&lt;<span class="w"> </span>gro_file.txt
+rm<span class="w"> </span>gro_file.txt
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Convert successfully!&quot;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">在Windows的git中运行的Shell脚本</span><pre><span></span><code><span class="ch">#!/usr/bin/bash</span>
+
+<span class="nv">file_extend</span><span class="o">=</span><span class="s2">&quot;-merge&quot;</span><span class="w">  </span>
+
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>*.gro<span class="w"> </span>
+<span class="k">do</span>
+<span class="w">    </span><span class="nv">filename</span><span class="o">=</span><span class="si">${</span><span class="nv">file</span><span class="p">%.*</span><span class="si">}</span><span class="w">  </span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w">   </span>&gt;&gt;<span class="w">  </span>gro_file_1.txt<span class="w"> </span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;9&quot;</span><span class="w"> </span>&gt;&gt;<span class="w">  </span>gro_file_1.txt<span class="w"> </span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;./&quot;</span><span class="nv">$filename$file_extend</span><span class="s2">&quot;.gro&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>gro_file_1.txt
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;r&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>gro_file_1.txt
+<span class="k">done</span>
+
+sed<span class="w"> </span><span class="s1">&#39;$s/.*/q/&#39;</span><span class="w"> </span>gro_file_1.txt<span class="w"> </span>&gt;<span class="w"> </span>gro_file_2.txt
+rm<span class="w"> </span>gro_file_1.txt
+mv<span class="w"> </span>gro_file_2.txt<span class="w"> </span>gro_file.txt<span class="w"> </span>
+
+modGro.exe<span class="w"> </span>&lt;<span class="w"> </span>gro_file.txt
+rm<span class="w"> </span>gro_file.txt
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Convert successfully!&quot;</span>
+</code></pre></div>
+<h3 id="modgro_4">附：对于modGro内部实现的一些说明</h3>
+<h4 id="20">2.0版本</h4>
+<p>(以下内容 2025-Mar-9更新)</p>
+<p>modGro的实现过程中采用了面向对象编程(OOP)的方法。在这之中，存在三个类，并且这三个类是层层继承的关系。<code>reside</code>类中使用到了<code>def_vector</code>类的相关性质，而<code>GRO</code>类中使用到了<code>reside</code>类的相关性质，如下图所示。</p>
+<figure>
+  <img alt="" src="MD/class.png" width="500" />
+</figure>
+<p>这三个类的作用如下：</p>
+<ul>
+<li><code>def_vector</code>：三维矢量的类。矢量的平移、旋转以及矢量之间的夹角在此类中进行实现。</li>
+<li><code>reside</code>：单个残基的类。<code>gro</code>文件中的每一个残基都为该类的一个实例。该类中有三个属性，分别为<code>resname</code>(该残基的残基名)、<code>atom_name_reside</code>(残基中的原子名数组)与<code>coordinate_reside</code>(残基中的原子坐标数组)。在这之中，<code>coordinate_reside</code>中的每一个元素都为<code>def_vector</code>实例。</li>
+<li><code>GRO</code>：gro文件的类。该类主要用于将gro文件中的盒子信息、残基序号、残基名、原子名和原子坐标等信息组织起来。</li>
+</ul>
+<p><code>GRO</code>类中保存<code>gro</code>文件中的信息采用了关联数组(即<strong>字典</strong>)。键为残基的序号，而值为残基的信息。如下图所示。</p>
+<figure>
+  <img alt="" src="MD/class-1.png" width="500" />
+</figure>
+<h4 id="21">2.1版本</h4>
+<p>(以下内容 2025-May-1更新)</p>
+<p>2.1版本与2.0版本最大的区别在于<code>gro</code>文件中的信息采用<strong>链表</strong>进行存储。程序中所使用链表的节点结构如下图所示。</p>
+<figure>
+  <img alt="" src="MD/node.png" width="400" />
+</figure>
+<p>链表的节点主要包括两个部分。前一个部分存储一个<code>reside</code>对象的指针，而后一个部分存储一个指向下一个节点的指针。这样，就形成了下面的链表结构。</p>
+<figure>
+  <img alt="" src="MD/list.png" width="800" />
+</figure>
+<p>该链表的头节点由指针<code>head_ptr</code>所指，而尾节点由指针<code>end_ptr</code>所指。链表中每一个残基出现的先后顺序决定了其的残基序号。</p>
+<p>此外，在2.1版本中采用了<strong>动态内存分配</strong>的方法。这提高了内存的利用效率。</p>
 
 
 
