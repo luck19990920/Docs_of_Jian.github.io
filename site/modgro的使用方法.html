@@ -10,13 +10,11 @@
       
       
       
-        <link rel="canonical" href="http://blog.99092019.xyz/%E5%8D%95%E5%91%A8%E6%9C%9F%E5%BE%AE%E6%9E%B6%E6%9E%84%E7%9A%84%E5%AE%9E%E7%8E%B0risc-v%E6%8C%87%E4%BB%A4%E9%9B%86.html">
+        <link rel="canonical" href="http://blog.99092019.xyz/modgro%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html">
       
       
-        <link rel="prev" href="gromacs%E7%9A%84%E4%BD%BF%E7%94%A8.html">
+        <link rel="prev" href="%E5%8D%95%E5%91%A8%E6%9C%9F%E5%BE%AE%E6%9E%B6%E6%9E%84%E7%9A%84%E5%AE%9E%E7%8E%B0risc-v%E6%8C%87%E4%BB%A4%E9%9B%86.html">
       
-      
-        <link rel="next" href="modgro%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>单周期微架构的实现(RISC-V指令集) - Docs of Jian</title>
+        <title>modGro的使用方法 - Docs of Jian</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#risc-v" class="md-skip">
+        <a href="#modgro" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              单周期微架构的实现(RISC-V指令集)
+              modGro的使用方法
             
           </span>
         </div>
@@ -499,29 +497,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#modgro_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      modGro的简要介绍
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modgro_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      modGro的主要功能
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      指令的底层实现
+      相关例子
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#modgro_3" class="md-nav__link">
     <span class="md-ellipsis">
-      其他指令的底层实现
+      附：对于modGro内部实现的一些说明
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附：对于modGro内部实现的一些说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.0版本
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
     <span class="md-ellipsis">
-      底层实现效率分析
+      2.1版本
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -562,7 +593,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-04-20 00:00:00+00:00" class="md-ellipsis">2025年4月20日</time>
+                        <time datetime="2025-04-26 00:00:00+00:00" class="md-ellipsis">2025年4月26日</time>
                       </div>
                     </li>
                     
@@ -573,7 +604,7 @@
                           <span class="md-ellipsis">
                             分类于
                             
-                              <a href="category/computer-science.html">Computer Science</a></span>
+                              <a href="category/computational-chemistry.html">Computational Chemistry</a></span>
                         </div>
                       </li>
                     
@@ -610,13 +641,13 @@
     
     
     
-      <a href="tags.html#computer-science" class="md-tag">Computer Science</a>
+      <a href="tags.html#computational-chemistry" class="md-tag">Computational Chemistry</a>
     
   
     
     
     
-      <a href="tags.html#risc-v" class="md-tag">RISC-V</a>
+      <a href="tags.html#molecular-dynamics-simulation" class="md-tag">Molecular Dynamics Simulation</a>
     
   
 </nav>
@@ -626,129 +657,221 @@
   
 
 
-<h1 id="risc-v">单周期微架构的实现(RISC-V指令集)</h1>
-<p>本篇文章主要用于记录在学习Digital Design and Computer Architecture(RISC-V Edition)一书中对单周期微架构过程的理解。</p>
+<h1 id="modgro">modGro的使用方法</h1>
+<p>本篇文章主要用于说明modGro的使用方法。</p>
 <!-- more -->
 
-<p>下面的讨论主要围绕以下的RISC-V汇编代码的实现展开。
-<div class="highlight"><pre><span></span><code>0x1000  L7: lw  x6, -4(x9)
-0x1004      sw  x6, 8(x9)
-0x1008      or  x4, x5, x6
-0x100C      beq x4, x4, L7
+<h3 id="modgro_1">modGro的简要介绍</h3>
+<p>modGro是专门用于处理GROMACS生成的gro文件的工具。modGro可在其<a href="https://github.com/luck19990920/Scripts/tree/master/modGro" target="_blank">主页</a>上进行下载。下载得到的文件夹中，<code>modGro</code>是在Linux系统中的可执行文件，<code>modGro.exe</code>为在Windows系统中的可执行文件。modGro支持修改gro文件中特定的残基名和原子名、删除特定的残基、复制特定的残基、对残基进行平移和合并多个gro文件等操作。文中涉及到的文件可在<a href="MD/files.zip">此处</a>下载。</p>
+<h3 id="modgro_2">modGro的主要功能</h3>
+<p>将gro文件载入modGro后，会出现如下的菜单选项。
+<div class="highlight"><pre><span></span><code> 1 Show residue information
+ 2 Modify the residue or atom names
+ 3 Translate selected residues according to a translation vector
+ 4 Clone residues         5 Remove residues
+ 6 Set cell information
+ 7 Merge multiple .gro file
+ 8 Display the coordinate range of the selected residue
+ 9 Output current structure to .gro file
 </code></pre></div>
-假设初始情况下<code>x9</code>寄存器中的值为<code>0x2004</code>，<code>x5</code>寄存器中的值为<code>6</code>，内存地址<code>0x2000</code>处的值为10。则，</p>
+下面将逐一的讲解各选项的含义。</p>
 <ul>
-<li>汇编代码第一行：将内存地址为<code>0x2004-4=0x2000</code>处的值(即<code>10</code>)复制到寄存器<code>x6</code>中</li>
-<li>汇编代码第二行：将寄存器<code>x6</code>中的值复制到内存地址<code>0x2004+8=0x200C</code>处</li>
-<li>汇编代码第三行：对<code>x5</code>与<code>x6</code>寄存器中的值按位进行或操作，并将结果写入<code>x4</code>寄存器中</li>
-<li>汇编代码第四行：比较<code>x4</code>寄存器中的值是否等于<code>x4</code>寄存器中的值，等于则跳转到<code>L7</code>指令地址。很明显，上述条件始终满足，因此该段程序持续运行</li>
+<li>选项<code>1 Show residue information</code></li>
 </ul>
-<h3 id="_1">指令的底层实现</h3>
-<p>对于指令的实现过程，第一个阶段即从指令存储器(Instruction Memory)中提取出指令。该过程能使用如下的电路结构实现：</p>
-<figure>
-  <img alt="" src="CS/single_cycle/fetch.png" width="300" />
-</figure>
-<p>该电路左侧输入的为下一条指令的地址(<code>PCNext</code>)，当时钟上升沿时，下一条指令的地址通过触发器成为<code>PC</code>(注：<code>PCNext</code>与<code>PC</code>均为32位二进制数)。指令存储器的输入为所需执行指令的地址(在这里为<code>PC</code>)，指令存储器的输出为<code>PC</code>处的指令内容(<code>Instr</code>)。对于第一条指令<code>lw x6, -4(x9)</code>，PC为<code>0x1000</code>，<code>Instr</code>为<code>0xFFC4A303</code>。该条指令由汇编代码转换为机器代码的过程如下图所示。</p>
-<figure>
-  <img alt="" src="CS/single_cycle/lw.png" width="400" />
-</figure>
-<p>当提取完成指令后(即获得了<code>Instr</code>后)，下一步就是执行相关的指令内容。对于第一条指令(<code>lw x6, -4(x9)</code>)，下一步是读取源寄存器<code>x9</code>中的内容。由于<code>lw</code>为RISC-V中的I型指令，因此根据RISC-V指令集编码规则可知，<code>lw x6, -4(x9)</code>指令对应的机器代码的19至15位为对应源寄存器的编号。将得到的寄存器编号传入寄存器文件(Register File)，即可以获得该寄存器的内容。与上述过程同时发生的是获取地址的偏移量，由于此指令中的立即数为12位的有符号数，因此需要将其采用符号拓展的方式拓展至32位。该步骤可使用拓展单元(<code>Extend</code>)实现。符号拓展后的结果为<code>ImmExt</code>(即<code>0xFFFFFFFC</code>)。</p>
-<figure>
-  <img alt="" src="CS/single_cycle/lw-1.png" width="500" />
-</figure>
-<p>完成上述的步骤后，下一步即计算经过偏移后的内存地址。该过程可使用算术逻辑单元(<code>ALU</code>)实现，如下图所示。<code>ALU</code>的输入为两个操作数(<code>SrcA</code>与<code>SrcB</code>)，其中<code>SrcA</code>为直接从寄存器中读取的内存地址，而<code>SrcB</code>为经过符号拓展得到的地址偏移量。此外，<code>ALU</code>还需一个<code>ALUControl</code>信号输入，该信号控制<code>ALU</code>执行何种操作。在这里，<code>ALUControl</code>与<code>ALU</code>操作之间的关系如下：</p>
+<p>该选项主要用于将gro文件中的内容(除了原子个数信息和盒子信息以外的部分)展示在屏幕上，便于检查。键入<code>1</code>即可进入该选项。进入该选项后，键入不同的数字则可以用不同的方式筛选出需要展示在屏幕上的残基或原子的信息。例如，键入<code>1</code>则可以将gro文件中所有的残基信息展示在屏幕上，键入<code>2</code>则可以将gro文件中特定序号的残基(残基的序号从1开始)信息展示在屏幕上，而键入<code>3</code>则可以将gro文件中特定序号的原子(原子的序号从1开始)信息展示在屏幕上。</p>
 <ul>
-<li><code>ALUControl</code>=<code>000</code>, <code>Function</code>=<code>Add</code></li>
-<li><code>ALUControl</code>=<code>001</code>, <code>Function</code>=<code>Subtract</code></li>
-<li><code>ALUControl</code>=<code>010</code>, <code>Function</code>=<code>AND</code></li>
-<li><code>ALUControl</code>=<code>011</code>, <code>Function</code>=<code>OR</code></li>
-<li><code>ALUControl</code>=<code>101</code>, <code>Function</code>=<code>SLT</code></li>
+<li>选项<code>2 Modify the residue or atom names</code></li>
 </ul>
-<p>实现上述过程的电路结构图如下所示。</p>
-<figure>
-  <img alt="" src="CS/single_cycle/lw-2.png" width="600" />
-</figure>
-<p>当采用<code>ALU</code>得到最终的内存地址后，下一步则是将该内存地址上的值写回至特定的寄存器中，如下图所示。</p>
-<figure>
-  <img alt="" src="CS/single_cycle/lw-3.png" width="600" />
-</figure>
-<p>上图数据存储器(Data Memory)中，<code>A</code>端口用于地址输入，<code>RD</code>用于读输出，<code>WD</code>用于写输入。当<code>WE</code>为1时，才能够写入数据。数据存储器读出的数据为<code>ReadData</code>(即10)。该数据通过寄存器文件的<code>WD3</code>端口写入，<code>A3</code>端口为需要写入的内容对应着的寄存器序号和<code>WE3</code>控制能否写入。</p>
-<p>当第一条指令快要完成的同时，计算机需要计算下一条指令的地址，以便执行后续的指令。由于RISC-V(准确来说是RISC-V指令集中的RV32I指令集)中一条指令占4字节，因此在顺序结构中下一条指令的地址(<code>PCNext</code>)即为当前指令地址(<code>PC</code>)加上4，即<code>PCNext=PC+4</code>。该过程可使用一个加法器来完成，如下图所示。</p>
-<figure>
-  <img alt="" src="CS/single_cycle/lw-4.png" width="600" />
-</figure>
-<p>至此，上述汇编代码的第一行实现完成。下面讨论汇编代码第二行的实现。该条指令由汇编代码转换为机器代码的过程如下图所示。</p>
-<figure>
-  <img alt="" src="CS/single_cycle/sw.png" width="500" />
-</figure>
-<p>相应的电路实现如下图所示(灰线为完成本指令用不到的电路)</p>
-<figure>
-  <img alt="" src="CS/single_cycle/sw-1.png" width="600" />
-</figure>
-<p>在该条指令的实现过程中，<code>PC</code>为<code>0x1004</code>，<code>PCNext</code>为<code>0x1008</code>，得到的机器语言<code>Instr</code>为<code>0x0064A423</code>。在该机器语言中，19至15位所代表的寄存器中存放着未偏移的内存地址，31至25位和11至7位为地址的偏移量。对于未偏移的内存地址，可使用寄存器文件在<code>A1</code>端读入寄存器的编号，<code>RD1</code>端输出该寄存器中的值。而对于地址的偏移量，可使用<code>Extend</code>单元对其进行提取。<code>Extend</code>上的<code>ImmSrc</code>端口控制着如何提取机器语言中的立即数部分。其中，</p>
+<p>该选项主要用于修改gro文件中特定的残基名或原子名。键入<code>2</code>即可进入该选项。进入该选项后，键入不同的数字则可对特定序号的残基名或原子名进行修改。</p>
 <ul>
-<li><code>ImmSrc</code>=<code>0</code>，对应<code>lw</code>操作，立即数为<code>Instr</code>中的31至20位，并进行符号拓展</li>
-<li><code>ImmSrc</code>=<code>1</code>，对应<code>sw</code>操作，立即数为<code>Instr</code>中的31至25位与11至7位</li>
+<li>选项<code>3 Translate selected residues according to a translation vector</code></li>
 </ul>
-<p>因此，此时<code>ImmSrc</code>=<code>1</code>。获得未偏移的地址和地址偏移量后即可以采用<code>ALU</code>计算得到最终的内存地址<code>ALUResult</code>。紧接着，将该内存地址中的值修改为<code>x6</code>寄存器中的值。<code>x6</code>寄存器中的值可在寄存器文件中提取。寄存器文件<code>A2</code>端口输入要读取的寄存器序号(即该条指令对应的机器语言的24至20位)，<code>RD2</code>端口即可输出该寄存器的值。将该值与数据存储器(Data Memory)写入端口相连，即可实现对内存地址为<code>ALUResult</code>上的值的修改。此时，数据存储器的<code>WE</code>为1。
-对于第三条汇编代码(<code>or x4, x5, x6</code>)，其对应的机器代码如下图所示。</p>
-<figure>
-  <img alt="" src="CS/single_cycle/or.png" width="500" />
-</figure>
-<p>实现上述指令的电路实现如下图所示(灰线为完成本指令用不到的电路)</p>
-<figure>
-  <img alt="" src="CS/single_cycle/or-1.png" width="600" />
-</figure>
-<p>此时<code>PC</code>为<code>0x1008</code>，<code>PCNext</code>为<code>0x100C</code>，从指令存储器中获取得到的指令(即<code>Instr</code>)为<code>0x0062E233</code>。首先需要取出两个源寄存器中的值。该步可用2套寄存器文件读取端口实现。在上述电路中，端口<code>A1</code>输入第一个源寄存器(<code>rs1</code>)的序号(即<code>Instr</code>中的第19至15位)，端口<code>RD1</code>输出第一个源寄存器中的值。端口<code>A2</code>输入第二个源寄存器(<code>rs2</code>)的序号(即<code>Instr</code>中的第24至20位)，端口<code>RD2</code>输出第二个源寄存器中的值。随后将这两个寄存器中获得的值输入<code>ALU</code>中进行运算。由于<code>ALU</code>输入的两个值不一定全部都是来自寄存器，还有可能来自于指令中的立即数。因此，在寄存器文件与<code>ALU</code>之间添加一个复用器。该复用器的信号<code>ALUSrc</code>确定传入<code>ALU</code>的第二个操作数是来自寄存器还是立即数。对于<code>lw</code>/<code>sw</code>等指令，<code>ALUSrc</code>为<code>1</code>，立即数作为<code>SrcB</code>传入<code>ALU</code>。对于<code>R</code>型指令，<code>ALUSrc</code>为<code>0</code>，寄存器读出的数据作为<code>SrcB</code>传入<code>ALU</code>。在此指令下，寄存器读出的数据作为<code>SrcB</code>传入<code>ALU</code>，故<code>ALUSrc</code>为<code>0</code>。经过<code>ALU</code>计算后得到的<code>ALUResult</code>即为最终的结果。对于该条指令，还需将该结果返回至特定的寄存器中。在这之中，返回的寄存器序号为<code>Instr</code>中的11至7位。而返回寄存器的值为<code>ALUResult</code>。由于该指令与数据存储器无关，因此在前面电路的基础上，可在数据存储器后添加一个复用器，该复用器用来选择传回寄存器的值是直接来源于<code>ALUResult</code>还是从数据存储器中获得的<code>ReadData</code>。当复用器的<code>ResultSrc</code>为<code>0</code>时，返回寄存器的值直接来源于<code>ALUResult</code>。当复用器的<code>ResultSrc</code>为<code>1</code>时，返回寄存器的值来源于从数据存储器中获得的<code>ReadData</code>。</p>
-<p>对于最后的一条指令<code>beq x4, x4, L7</code>，其的机器语言如下。</p>
-<figure>
-  <img alt="" src="CS/single_cycle/beq.png" width="500" />
-</figure>
-<p>实现上述指令的电路实现如下图所示(灰线为完成本指令用不到的电路)</p>
-<figure>
-  <img alt="" src="CS/single_cycle/beq-1.png" width="600" />
-</figure>
-<p>执行该指令时，<code>PC</code>为<code>0x100C</code>，从指令存储器(Instruction Memory)中获得的指令机器代码为<code>0xFE420AE3</code>。随后，从寄存器文件中获取指令中两个寄存器的值。其中，寄存器文件的<code>A1</code>端口对应着指令中<code>rs1</code>对应的寄存器的序号(即指令中的19至15位)，<code>RD1</code>端口输出<code>rs1</code>对应的寄存器中的值。而寄存器文件的<code>A2</code>端口对应着指令中<code>rs2</code>对应的寄存器的序号(即指令中的24至20位)，<code>RD2</code>端口输出<code>rs2</code>对应的寄存器中的值。<code>x4</code>寄存器中的值为<code>14</code>，因此<code>RD1</code>与<code>RD2</code>的输出值都为14。随后，将这两个值都传入<code>ALU</code>中，此时<code>ALUControl</code>为<code>001</code>(对应减法操作)。由于减法的结果为<code>0</code>，因此<code>ALU</code>中的零信号为<code>1</code>。在此基础上，上图最左侧添加了一个复用器。该复用器用来选择<code>PCNext</code>的来源。当<code>PCSrc</code>为<code>0</code>时，<code>PCNext</code>由<code>PCPlus4</code>而来。而当<code>PCSrc</code>为<code>1</code>时，<code>PCNext</code>由<code>PCTarget</code>而来。<code>PCTarget</code>是此时的<code>PC</code>值与指令中立即数的和。</p>
-<p>以上就讨论了在本文开头展示的4条汇编语言的底层实现方式。但是上述的实现的方式还不够，因为还未直接将指令与控制信息(<code>PCSrc</code>，<code>RegWrite</code>，<code>ImmSrc</code>，<code>ALUSrc</code>，<code>ALUControl</code>，<code>MemWrite</code>和<code>ResultSrc</code>)之间联系起来。换而言之，就是只考虑了实现的功能，而未考虑控制信号。因此，下面将在上述电路的基础上增加控制单元。</p>
-<figure>
-  <img alt="" src="CS/single_cycle/single-cycle.png" width="800" />
-</figure>
-<p>上图中蓝色部分为在原有的电路上增加的控制单元，控制单元有<code>4</code>个输入，分别为<code>opcode</code>，<code>funct3</code>，<code>funct7</code>的第5位和<code>ALU</code>计算结果中的<code>Zero</code>信号。通过指令中的<code>opcode</code>，<code>funct3</code>和<code>funct7</code>的第5位可确定是哪一个指令。而<code>Zero</code>信号则与分支语句有关。输出的有如下的<code>7</code>个信号：</p>
+<p>该选项主要用于将gro文件中特定的残基进行平移的操作。</p>
 <ul>
-<li><code>PCSrc</code>：控制<code>PC</code>的下一个值。若为<code>0</code>，常规顺序结构，若为<code>1</code>，分支语句</li>
-<li><code>ResultSrc</code>：控制最终结果的来源。若为<code>0</code>，结果直接来源于<code>ALU</code>，若为<code>1</code>，结果为从数据存储器中读出的值</li>
-<li><code>MemWrite</code>：控制是否允许对数据存储器进行写入。若为<code>0</code>，不能写入，若为<code>1</code>，能写入</li>
-<li><code>ALUControl</code>：控制<code>ALU</code>中执行的运算类型</li>
-<li><code>ALUSrc</code>：控制传入<code>ALU</code>的第二个操作数的来源。若为<code>0</code>，来自寄存器文件，若为<code>1</code>，来自立即数</li>
-<li><code>ImmSrc</code>：控制立即数的解码方式。若为<code>00</code>，立即数是指令<code>I</code>型指令的解码方式，若为<code>01</code>，立即数是<code>S</code>型指令的解码方式，若为<code>10</code>，立即数是<code>B</code>型指令的解码方式</li>
-<li><code>RegWrite</code>：控制寄存器文件是否可以写入。若为<code>0</code>，不可以写入，若为<code>1</code>，可以写入</li>
+<li>选项<code>4 Clone residues</code></li>
 </ul>
-<h3 id="_2">其他指令的底层实现</h3>
-<p>在上述电路的基础上，我们可以获得以下的执行<code>and</code>指令的电路实现。</p>
+<p>该选项主要用于将gro文件中特定的残基进行复制。复制得到的残基还在其原位置。因此，对残基进行复制操作后往往需要对残基进行平移操作。</p>
+<ul>
+<li>选项<code>5 Remove residues</code></li>
+</ul>
+<p>该选项与选项<code>4</code>相对，主要用于将gro文件中特定的残基进行删除。</p>
+<ul>
+<li>选项<code>6 Set cell information</code></li>
+</ul>
+<p>该选项主要用来修改盒子的大小。键入<code>6</code>后即可进入该选项。随后需依次输入确定盒子大小的三个矢量。</p>
+<ul>
+<li>选项<code>7 Merge multiple .gro file</code></li>
+</ul>
+<p>该选项主要用来合并多个gro文件。</p>
+<ul>
+<li>选项<code>8 Display the coordinate range of the selected residue</code></li>
+</ul>
+<p>该选项主要用来计算得到特定残基中原子坐标在x/y/z方向上的最大值与最小值。</p>
+<ul>
+<li>选项<code>9 Output current structure to .gro file</code></li>
+</ul>
+<p>该选项主要用来输出信息至gro文件中</p>
+<h3 id="_1">相关例子</h3>
+<ul>
+<li>例子1：修改特定残基的残基名与残基中的原子名</li>
+</ul>
+<p><code>solv.gro</code>为一个含有528个水分子的gro文件。打开modGro后，依次键入如下的内容(<code>//</code>后的是注释)可以将1,2,9-30号残基的名字改为<code>MOL</code>。
+<div class="highlight"><pre><span></span><code>solv.gro                 // 载入solv.gro
+2                        // 修改残基名或原子名
+1                        // 修改残基名
+1,2,9-30                 // 需要修改的残基序号为1,2,9-30(残基序号从1开始)
+MOL                      // 修改的残基名为MOL
+0                        // 返回主菜单
+9                        // 输出gro文件
+C:\Users\fix-1.gro       // 输出到C:\Users\fix-1.gro
+q                        // 退出程序
+</code></pre></div>
+此时，序号为1,2,9-30的残基的残基名已经由<code>SOL</code>被修改为<code>MOL</code>。修改后的结构被保存到<code>fix-1.gro</code>文件中。</p>
+<p>还是对于<code>solv.gro</code>文件，打开modGro后，依次键入如下的内容可以将1,10,18-20号残基中的第一个原子的原子名修改为<code>HA</code>。
+<div class="highlight"><pre><span></span><code>solv.gro                 // 载入solv.gro
+2                        // 修改残基名或原子名
+2                        // 修改原子名
+2                        // 根据残基序号进行修改
+1,10,18-20               // 需要修改的残基序号为1,10,18-20(残基序号从1开始)
+1                        // 修改残基中的第一个原子的原子名
+HA                       // 修改成的原子名为HA
+0                        // 返回主菜单
+9                        // 输出gro文件
+C:\Users\fix-2.gro       // 输出到C:\Users\fix-2.gro
+q                        // 退出程序
+</code></pre></div>
+此时，序号为1,10,18-20的残基中的第一个原子的原子名已经由<code>OW</code>被修改为<code>HA</code>。修改后的结构被保存到<code>fix-2.gro</code>文件中。</p>
+<ul>
+<li>例子2：将单层COF结构拓展成多层COF结构</li>
+</ul>
+<p><code>COF.gro</code>为某一COF材料的gro文件(如下图所示)。我们的目标是采用modGro将该单层COF结构拓展成5层COF结构，并且层与层之间的间距为5埃。</p>
 <figure>
-  <img alt="" src="CS/single_cycle/AND.png" width="800" />
+  <img alt="" src="MD/COF-1.bmp" width="600" />
 </figure>
-<p>在上述电路的基础上，我们可以获得以下的执行<code>andi</code>指令的电路实现。</p>
+<p>首先，双击点开<code>modGro.exe</code>，然后将<code>COF.gro</code>拖进窗口中并回车。窗口中将显示如下的gro文件信息。
+<div class="highlight"><pre><span></span><code>Cell information
+In Angstrom:
+Cell vector 1,  X=  22.50600  Y=   0.00000  Z=   0.00000  Norm=  22.50600
+Cell vector 2,  X=   0.00000  Y=  38.98150  Z=   0.00000  Norm=  38.98150
+Cell vector 3,  X=   0.00000  Y=   0.00000  Z=  10.00000  Norm=  10.00000
+Cell angles:
+  Alpha=  90.00000  Beta=  90.00000  Gamma=  90.00000 degree
+  Total atoms:    240
+Total residue:    1
+</code></pre></div>
+上述的文件信息表明：该gro文件中的盒子是正交的，并且盒子的三边长分别为22.50600埃、38.98150埃和10.00000埃。盒子三边的三个夹角都为90度。该gro文件中的原子总数为240，有1个残基。</p>
+<div class="admonition note">
+<p class="admonition-title">小贴士</p>
+<p>在Windows下，也可以不双击点开<code>modGro.exe</code>，而用鼠标左键将<code>COF.gro</code>放置到<code>modGro.exe</code>上面后放开鼠标左键。这样可以直接使<code>modGro.exe</code>载入<code>COF.gro</code>文件进行分析。在Linux下，可直接在命令行中输入<code>modGro test.gro</code>回车即可将<code>test.gro</code>载入<code>modGro</code>中。</p>
+</div>
+<p>在这里，操作思路是先将单层的COF结构复制4次，然后依次对这些单层的COF结构进行平移。为实现将单层的COF结构复制4次，首先键入<code>4</code>。然后再键入<code>1</code>即可对单层的COF膜复制一次。此时，屏幕上会显示残基个数和原子个数，如下所示。
+<div class="highlight"><pre><span></span><code>Well done. The current number of residues is 2. The current number of atoms is 480.
+</code></pre></div>
+按照上面的方法，再对1号残基复制3次即可得到5层COF结构。随后，对2号残基沿着z方向平移5埃，对3号残基沿着z方向平移10埃，对4号残基沿着z方向平移15埃，对5号残基沿着z方向平移20埃，并对盒子z方向上的尺寸进行适当的增加。执行该操作可键入如下的内容：
+<div class="highlight"><pre><span></span><code>3                    // 对特定的残基进行平移操作
+2                    // 对2号残基进行平移
+0,0,5                // 平移的矢量为0,0,5(单位为埃)
+3                    // 对特定的残基进行平移操作
+3                    // 对3号残基进行平移
+0,0,10               // 平移的矢量为0,0,10(单位为埃)
+3                    // 对特定的残基进行平移操作
+4                    // 对4号残基进行平移
+0,0,15               // 平移的矢量为0,0,15(单位为埃)
+3                    // 对特定的残基进行平移操作
+5                    // 对5号残基进行平移
+0,0,20               // 平移的矢量为0,0,20(单位为埃)
+6                    // 修改盒子尺寸
+22.50600,0,0         // 第一个轴对应的矢量为22.50600,0,0(单位为埃)
+0,38.98150,0         // 第二个轴对应的矢量为0,38.98150,0(单位为埃)
+0,0,30               // 第三个轴对应的矢量为0,0,30(单位为埃)
+9                    // 输出gro文件
+[回车]               // 输出到modGro.exe所在目录
+q                    // 退出程序
+</code></pre></div>
+此时，在<code>modGro.exe</code>所在目录下会生成<code>fix.gro</code>，该文件就是最终得到的gro文件。将该gro文件利用VMD可视化，如下图所示。此时COF结构已经由最初的1层拓展至5层，并且层与层之间的间隔为5埃。</p>
 <figure>
-  <img alt="" src="CS/single_cycle/addi.png" width="500" />
+  <img alt="" src="MD/COF-2.bmp" width="500" />
 </figure>
-<p>此外，我们还可以得到<code>jal</code>指令的底层电路实现。<code>jal rd, label</code>指令完成了两件事。第一件事是将<code>PCNext</code>变为<code>PC+imm</code>(<code>imm</code>通过label与目前的<code>PC</code>求差得到)。第二件事是将当前<code>PC</code>加上4的值(即后一条指令的地址)保存到寄存器<code>rd</code>中。</p>
+<ul>
+<li>例子3：对多个gro文件进行合并</li>
+</ul>
+<p>本例子将在例子2的基础上沿着z轴在COF结构的左侧添加水溶液。<code>solv.gro</code>为一个三边尺寸分别为22.50600，38.98150和20(单位为埃)的水盒子。首先，将<code>solv.gro</code>利用modGro把其z方向的盒子尺寸由20埃变为50埃(因为上述得到的<code>fix.gro</code>的z方向上的盒子尺寸为30埃)。执行该操作可键入如下的内容(<code>//</code>后的是注释)：
+<div class="highlight"><pre><span></span><code>solv.gro                  // 载入solv.gro文件
+6                         // 修改盒子尺寸
+22.50600,0,0              // 第一个轴对应的矢量为22.50600,0,0(单位为埃)
+0,38.98150,0              // 第二个轴对应的矢量为0,38.98150,0(单位为埃)
+0,0,50                    // 第三个轴对应的矢量为0,0,50(单位为埃)
+9                         // 输出gro文件
+extend_solv.gro           // 输出到extend_solv.gro文件中
+q                         // 退出程序
+</code></pre></div>
+将<code>extend_solv.gro</code>可视化如下所示。</p>
 <figure>
-  <img alt="" src="CS/single_cycle/jal.png" width="800" />
+  <img alt="" src="MD/COF-3.bmp" width="500" />
 </figure>
-<p>上述的<code>jal</code>指令的底层电路实现与前面讨论的其他指令的电路实现最大的区别在与最终写入寄存器文件中的结果<code>Result</code>既不来自于<code>ALU</code>直接计算的结果<code>ALUResult</code>，也不来自从数据存储器中读出的结果<code>ReadData</code>，而是来自<code>PCPlus4</code>。因此，在这里控制<code>Result</code>来源的复用器信号由之前的1位变为2位。<code>ResultSrc=10</code>对应着<code>Result</code>的结果来自<code>PCPlus4</code>。</p>
-<h3 id="_3">底层实现效率分析</h3>
-<p>对于本篇文章设计的电路结构，<code>lw</code>是最慢的(因为相较于其他指令，<code>lw</code>指令需要读寄存器文件中的值、使用<code>Extend</code>对立即数进行符号拓展、使用<code>ALU</code>进行计算、读数据存储器的值以及写寄存器文件的值。该指令几乎把上述电路中耗时的电子元件都走了)。对于单周期处理器而言，其的时钟周期取决于最慢的那条指令。因此，下面分析<code>lw</code>指令的耗时。</p>
+<p>随后，修改<code>fix.gro</code>的盒子信息，使其与上述的<code>extend_solv.gro</code>中的盒子信息保持一致，并且将COF结构整体沿着z方向平移20埃。执行该操作可键入如下的内容：
+<div class="highlight"><pre><span></span><code>fix.gro                    // 载入fix.gro文件
+6                          // 修改盒子尺寸
+22.50600,0,0               // 第一个轴对应的矢量为22.50600,0,0(单位为埃)
+0,38.98150,0               // 第二个轴对应的矢量为0,38.98150,0(单位为埃)
+0,0,50                     // 第三个轴对应的矢量为0,0,50(单位为埃)
+3                          // 对残基进行平移
+[回车]                     // 对所有的残基进行平移
+0,0,20                     // 平移的矢量为0,0,20(单位为埃)
+4                          // 输出gro文件
+extend_fix.gro             // 输出到extend_fix.gro文件中
+q                          // 退出程序
+</code></pre></div>
+将<code>extend_fix.gro</code>可视化如下所示。</p>
 <figure>
-  <img alt="" src="CS/single_cycle/time.png" width="1000" />
+  <img alt="" src="MD/COF-4.bmp" width="500" />
 </figure>
+<div class="admonition info">
+<p class="admonition-title">注意</p>
+<p>若采用modGro合并盒子尺寸不同的多个gro文件并且不在modGro中修改盒子的尺寸，最终得到的盒子尺寸为载入的第一个gro文件中的盒子尺寸。</p>
+</div>
+<p>最后，将<code>extend_solv.gro</code>与<code>extend_fix.gro</code>使用<code>modGro</code>进行合并。执行该操作可键入如下的内容：
+<div class="highlight"><pre><span></span><code>extend_solv.gro              // 载入extend_solv.gro文件
+7                            // 合并gro文件
+extend_fix.gro               // 需要将extend_fix.gro进行合并
+q                            // 退出输入
+9                            // 输出gro文件
+merge.gro                    // 输出到merge.gro文件中
+q                            // 退出程序
+</code></pre></div>
+将<code>merge.gro</code>可视化如下所示。</p>
 <figure>
-  <img alt="" src="CS/single_cycle/eq1.png" width="700" />
+  <img alt="" src="MD/COF-5.bmp" width="500" />
 </figure>
-<p>上图中，由于从寄存器中读取值与拓展立即数是同时发生的，因此需要求一个<code>max</code>函数。由于一般来说，从寄存器文件中读数据更慢。因此，上述的公式可以简化为：</p>
+<h3 id="modgro_3">附：对于modGro内部实现的一些说明</h3>
+<h4 id="20">2.0版本</h4>
+<p>(以下内容 2025-Mar-9更新)</p>
+<p>modGro的实现过程中采用了面向对象编程(OOP)的方法。在这之中，存在三个类，并且这三个类是层层继承的关系。<code>reside</code>类中使用到了<code>def_vector</code>类的相关性质，而<code>GRO</code>类中使用到了<code>reside</code>类的相关性质，如下图所示。</p>
 <figure>
-  <img alt="" src="CS/single_cycle/eq2.png" width="700" />
+  <img alt="" src="MD/class.png" width="500" />
 </figure>
+<p>这三个类的作用如下：</p>
+<ul>
+<li><code>def_vector</code>：三维矢量的类。矢量的平移、旋转以及矢量之间的夹角在此类中进行实现。</li>
+<li><code>reside</code>：单个残基的类。<code>gro</code>文件中的每一个残基都为该类的一个实例。该类中有三个属性，分别为<code>resname</code>(该残基的残基名)、<code>atom_name_reside</code>(残基中的原子名数组)与<code>coordinate_reside</code>(残基中的原子坐标数组)。在这之中，<code>coordinate_reside</code>中的每一个元素都为<code>def_vector</code>实例。</li>
+<li><code>GRO</code>：gro文件的类。该类主要用于将gro文件中的盒子信息、残基序号、残基名、原子名和原子坐标等信息组织起来。</li>
+</ul>
+<p><code>GRO</code>类中保存<code>gro</code>文件中的信息采用了关联数组(即<strong>字典</strong>)。键为残基的序号，而值为残基的信息。如下图所示。</p>
+<figure>
+  <img alt="" src="MD/class-1.png" width="500" />
+</figure>
+<h4 id="21">2.1版本</h4>
+<p>(以下内容 2025-May-1更新)</p>
+<p>2.1版本与2.0版本最大的区别在于<code>gro</code>文件中的信息采用<strong>链表</strong>进行存储。程序中所使用链表的节点结构如下图所示。</p>
+<figure>
+  <img alt="" src="MD/node.png" width="400" />
+</figure>
+<p>链表的节点主要包括两个部分。前一个部分存储一个<code>reside</code>对象的指针，而后一个部分存储一个指向下一个节点的指针。这样，就形成了下面的链表结构。</p>
+<figure>
+  <img alt="" src="MD/list.png" width="800" />
+</figure>
+<p>该链表的头节点由指针<code>head_ptr</code>所指，而尾节点由指针<code>end_ptr</code>所指。链表中每一个残基出现的先后顺序决定了其的残基序号。</p>
+<p>此外，在2.1版本中采用了<strong>动态内存分配</strong>的方法。这提高了内存的利用效率。</p>
 
 
 

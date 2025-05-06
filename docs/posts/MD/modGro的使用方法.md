@@ -211,6 +211,64 @@ q                            // 退出程序
   ![](COF-5.bmp){ width="500" }
 </figure>
 
+### modGro以命令行的方式运行
+为保证modGro能够以命令行的方式运行，首先需要将modGro的可执行文件所在的目录添加至环境变量中。添加方式如下：
+
+* 对于Windows系统：打开控制面板→系统与安全→系统→高级系统设置→环境变量→将modGro的可执行文件所在的目录添加至系统变量下的Path中。
+* 对于Linux系统：运行`vi ~/.bashrc`命令，将export PATH=$PATH:/sob/workspace添加至文件末尾。其中`/sob/workspace`为modGro可执行文件所在的目录，需根据实际情况进行调整。
+
+完成上述的设置后，在Windows系统中任意目录下打开cmd(按Win+R键，然后输入`cmd`)后，键入`modGro`即可启动modGro。在Linux系统中任意目录下键入`modGro`即可启动modGro。modGro以命令行的方式运行可结合输入文件名，例如`modGro test.gro`。下面是以命令行方式运行modGro的一个例子。
+
+#### 采用modGro调整gro文件为规范的gro文件
+gro文件中某几列的格式有特殊的要求。若不按照此要求组织gro文件，gromacs读取gro文件时将报错。下面的shell脚本实现了将目录下的所有gro文件规范化并输出。得到的以`-merge`结尾的gro文件即为modGro生成的规范的gro文件。
+
+``` shell title="在Linux中运行的Shell脚本" 
+#!/usr/bin/bash
+
+file_extend="-merge"  
+
+for file in *.gro 
+do
+    filename=${file%.*}  
+    echo "$file"   >>  gro_file_1.txt 
+    echo "9" >>  gro_file_1.txt 
+    echo "./"$filename$file_extend".gro" >> gro_file_1.txt
+    echo "r" >> gro_file_1.txt
+done
+
+sed '$s/.*/q/' gro_file_1.txt > gro_file_2.txt
+rm gro_file_1.txt
+mv gro_file_2.txt gro_file.txt 
+
+modGro < gro_file.txt
+rm gro_file.txt
+echo "Convert successfully!"
+```
+
+
+``` shell title="在Windows的git中运行的Shell脚本" 
+#!/usr/bin/bash
+
+file_extend="-merge"  
+
+for file in *.gro 
+do
+    filename=${file%.*}  
+    echo "$file"   >>  gro_file_1.txt 
+    echo "9" >>  gro_file_1.txt 
+    echo "./"$filename$file_extend".gro" >> gro_file_1.txt
+    echo "r" >> gro_file_1.txt
+done
+
+sed '$s/.*/q/' gro_file_1.txt > gro_file_2.txt
+rm gro_file_1.txt
+mv gro_file_2.txt gro_file.txt 
+
+modGro.exe < gro_file.txt
+rm gro_file.txt
+echo "Convert successfully!"
+```
+
 ### 附：对于modGro内部实现的一些说明
 #### 2.0版本
 (以下内容 2025-Mar-9更新)
