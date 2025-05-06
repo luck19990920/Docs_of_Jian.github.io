@@ -7,6 +7,7 @@ tags:
     - RISC-V
 comments: true
 draft: true
+slug: multicycle/
 ---
 
 # 多周期微架构的实现(RISC-V指令集)

@@ -6,6 +6,7 @@ tags:
     - Computational Chemistry
     - Molecular Dynamics Simulation
 comments: true
+slug: modGro_usage/
 ---
 
 # modGro的使用方法

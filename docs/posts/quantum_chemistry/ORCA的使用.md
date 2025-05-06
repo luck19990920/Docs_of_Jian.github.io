@@ -6,6 +6,7 @@ tags:
     - Computational Chemistry
     - Quantum Chemistry
 comments: true
+slug: ORCA_usage/
 ---
 
 # ORCA的使用

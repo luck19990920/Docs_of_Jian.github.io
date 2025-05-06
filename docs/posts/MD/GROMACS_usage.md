@@ -6,6 +6,7 @@ tags:
     - Computational Chemistry
     - Molecular Dynamics Simulation
 comments: true
+slug: gromacs_usage/
 ---
 
 # GROMACS的使用
