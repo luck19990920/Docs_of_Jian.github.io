@@ -54,6 +54,10 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
 
+extra:
+  analytics:
+    provider: google
+    property: G-EHVNYDZB7M
 
 copyright: Copyright &copy; 2024 - 2025 Jian Zhang
 repo_url: https://github.com/luck19990920
