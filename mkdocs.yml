@@ -4,6 +4,9 @@ site_url: http://blog.99092019.xyz
 
 theme:
   name: material
+  font:
+    text: "Microsoft Yahei"
+    code: "Consolas,Courier,courier new,stkaiti,kaiti,simkai,monospace"
   custom_dir: overrides
   language: zh
   palette:
@@ -22,12 +25,17 @@ theme:
       name: 切换至夜间模式
     primary: deep purple
     accent: deep orange
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - navigation.top
 
 plugins:
   - search
   - blog:
       blog_dir: .
       post_url_format: "{slug}"
+      pagination_per_page: 5
   - tags:
       tags_file: tags.md
   
@@ -39,6 +47,13 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
 
 copyright: Copyright &copy; 2024 - 2025 Jian Zhang
 repo_url: https://github.com/luck19990920

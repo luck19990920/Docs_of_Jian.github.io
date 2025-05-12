@@ -22,8 +22,8 @@ modGro是专门用于处理GROMACS生成的gro文件的工具。modGro可在其[
 ### modGro的主要功能
 
 将gro文件载入modGro后，会出现如下的菜单选项。
-```
- 1 Show residue information
+``` 
+ 1 Show residue information   
  2 Modify the residue or atom names
  3 Translate selected residues according to a translation vector
  4 Clone residues         5 Remove residues
@@ -32,6 +32,7 @@ modGro是专门用于处理GROMACS生成的gro文件的工具。modGro可在其[
  8 Display the coordinate range of the selected residue
  9 Output current structure to .gro file
 ```
+
 下面将逐一的讲解各选项的含义。
 
 * 选项`1 Show residue information`
