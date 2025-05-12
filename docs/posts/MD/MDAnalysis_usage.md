@@ -18,9 +18,9 @@ slug: MDAnalysis_usage/
 
 ### MDAnalyis的安装
 
-[MDAnalysis](https://www.mdanalysis.org/){:target="_blank"}是专门用于进行分子动力学模拟后处理的Python第三方库。若需使用该库，需要首先安装该库。该库能够在Linux、Windows以及macOS上使用。需要注意的是若在Windows上安装MDAnalysis时出现与Microsoft Visual C++ 14.0相关的报错，请先安装[Microsoft Visual Studio](https://visualstudio.microsoft.com/zh-hans/downloads/)后再安装MDAnalysis。下面演示在Windows下安装该库。
+[MDAnalysis](https://www.mdanalysis.org/){:target="_blank"}是专门用于进行分子动力学模拟后处理的Python第三方库。若需使用该库，需要首先安装该库。该库能够在Linux、Windows以及macOS上使用。需要注意的是若在Windows上安装MDAnalysis时出现与Microsoft Visual C++ 14.0相关的报错，请先安装[Microsoft Visual Studio](https://visualstudio.microsoft.com/zh-hans/downloads/){:target="_blank"}后再安装MDAnalysis。下面演示在Windows下安装该库。
 
-首先需安装Python。Python可在其[官网](https://www.python.org/)上下载得到。**安装Python的过程中请勾选Add python.exe to PATH，否则需手动将Python添加至环境变量。**手动将Python添加至环境变量的方法可参看[帖子](https://blog.csdn.net/Lyh1gguyg/article/details/146276117)。将Python添加至环境变量中的目的是使其在任意目录下都可启动。验证Python是否正确被添加至环境变量中的方法是在任意目录下打开cmd(按Win+R键，然后输入`cmd`)，然后输入`python`回车，若出现类似下面的内容则说明添加成功。
+首先需安装Python。Python可在其[官网](https://www.python.org/){:target="_blank"}上下载得到。**安装Python的过程中请勾选Add python.exe to PATH，否则需手动将Python添加至环境变量。**手动将Python添加至环境变量的方法可参看[帖子](https://blog.csdn.net/Lyh1gguyg/article/details/146276117){:target="_blank"}。将Python添加至环境变量中的目的是使其在任意目录下都可启动。验证Python是否正确被添加至环境变量中的方法是在任意目录下打开cmd(按Win+R键，然后输入`cmd`)，然后输入`python`回车，若出现类似下面的内容则说明添加成功。
 ```
 Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 19:29:22) [MSC v.1916 32 bit (Intel)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
@@ -38,7 +38,7 @@ for ts in u.trajectory:
     这里放置分析每一帧的代码
     '''
 ```
-代码的第一行`import MDAnalysis as mda`是载入MDAnalysis库，并给其取一个别名`mda`(取啥名都行，只需要代码前后保持一致)。代码的第二行`u = mda.Universe("test.gro","test.xtc")`是调用该库中的Universe函数，并将该函数得到的结果返回给变量`u`。Universe函数是MDAnalysis中最重要的一个函数。该函数用于将相关的分子动力学模拟的文件载入MDAnalysis。传入Universe函数的参数众多，详情可看[Universe](https://docs.mdanalysis.org/2.9.0/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe)。由于一般情况下只需要修改该函数参数列表中的前2个参数，因此下面解释这两个参数。
+代码的第一行`import MDAnalysis as mda`是载入MDAnalysis库，并给其取一个别名`mda`(取啥名都行，只需要代码前后保持一致)。代码的第二行`u = mda.Universe("test.gro","test.xtc")`是调用该库中的Universe函数，并将该函数得到的结果返回给变量`u`。Universe函数是MDAnalysis中最重要的一个函数。该函数用于将相关的分子动力学模拟的文件载入MDAnalysis。传入Universe函数的参数众多，详情可看[Universe](https://docs.mdanalysis.org/2.9.0/documentation_pages/core/universe.html#MDAnalysis.core.universe.Universe){:target="_blank"}。由于一般情况下只需要修改该函数参数列表中的前2个参数，因此下面解释这两个参数。
 
 * `topology`：该参数对应着分子动力学模拟结构文件的文件路径。这里传入的结构文件可以是gro文件或pdb等文件。
 * `coordinates`：该参数对应着分子动力学模拟轨迹文件的文件路径。这里传入的参数可以是一个单帧的结构文件(例如gro文件)或多个单帧文件组合成的列表或多帧的轨迹文件(例如xtc文件或trr文件或xyz文件)。需要注意的是`topology`与`coordinates`传入的文件需匹配。
@@ -49,7 +49,7 @@ for ts in u.trajectory:
     u = mda.Universe("test.gro","test.xtc")                                  # 单个轨迹文件分析
     u = mda.Universe("test.gro",["test1.xtc", "test2.xtc", "test3.xtc"])     # 多个轨迹文件分析
     ```
-代码的第三行用于选择出所需要研究的粒子。若没有这一行，则后续操作研究的是模拟盒子中的所有粒子。`u.select_atoms()`的括号中写入的是选择语句。选择语句的语法可参看[Atom selection language](https://userguide.mdanalysis.org/stable/selections.html)。这里选择出了所有残基名为NA的粒子。
+代码的第三行用于选择出所需要研究的粒子。若没有这一行，则后续操作研究的是模拟盒子中的所有粒子。`u.select_atoms()`的括号中写入的是选择语句。选择语句的语法可参看[Atom selection language](https://userguide.mdanalysis.org/stable/selections.html){:target="_blank"}。这里选择出了所有残基名为NA的粒子。
 
 `for ts in u.trajectory:`用于遍历每一帧。此外，还可以对`trajectory`使用Python中的切片操作。
 ???+ 举例
@@ -127,7 +127,7 @@ for ts in tqdm(u.trajectory):
 
 print(np.mean(np.array(result))/len(ions))
 ```
-上述代码中增加了对命令行参数解析的相关代码。完成命令行参数解析使用到了argparse库。该库的使用详见[argparse教程](https://docs.python.org/zh-cn/3/howto/argparse.html#)。
+上述代码中增加了对命令行参数解析的相关代码。完成命令行参数解析使用到了argparse库。该库的使用详见[argparse教程](https://docs.python.org/zh-cn/3/howto/argparse.html#){:target="_blank"}。
 
 第4行用于导入argparse库。
 
@@ -172,9 +172,9 @@ python C:\Users\89732\Desktop\coor.py -top C:\Users\89732\Desktop\eq.gro -tra C:
 
 #### 例子2：计算锂离子与水分子中O原子的径向分布函数
 
-对于某些较为常用的统计项目，MDAnalysis已经设计了相关[模块](https://docs.mdanalysis.org/stable/py-modindex.html)来进行统计。这使得可以直接调用相关的MDAnalysis模块完成分析而无需自己写遍历每一帧的分析代码。
+对于某些较为常用的统计项目，MDAnalysis已经设计了相关[模块](https://docs.mdanalysis.org/stable/py-modindex.html){:target="_blank"}来进行统计。这使得可以直接调用相关的MDAnalysis模块完成分析而无需自己写遍历每一帧的分析代码。
 
-对于径向分布函数的计算可使用[`MDAnalysis.analysis.rdf`](https://docs.mdanalysis.org/stable/documentation_pages/analysis/rdf.html#module-MDAnalysis.analysis.rdf)这个模块来实现。
+对于径向分布函数的计算可使用[`MDAnalysis.analysis.rdf`](https://docs.mdanalysis.org/stable/documentation_pages/analysis/rdf.html#module-MDAnalysis.analysis.rdf){:target="_blank"}这个模块来实现。
 ``` linenums="1" hl_lines="9-10"
 import MDAnalysis as mda
 from MDAnalysis.analysis import rdf

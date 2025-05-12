@@ -43,8 +43,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Microsoft+Yahei:300,300i,400,400i,700,700i%7CConsolas,Courier,courier+new,stkaiti,kaiti,simkai,monospace:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Microsoft Yahei";--md-code-font:"Consolas,Courier,courier new,stkaiti,kaiti,simkai,monospace"}</style>
       
     
     
@@ -678,64 +678,64 @@
 <p>该部涉及到Materials Studio具体的使用方法，这里不进行相关阐述。</p>
 <h4 id="step2-multiwfnorca">Step2: 使用Multiwfn生成ORCA输入文件</h4>
 <p>首先打开<code>Multiwfn</code>，然后将上一步得到的结构文件直接拉进Multiwfn中，然后便会出现以下的菜单选项：
-<div class="highlight"><span class="filename">Multiwfn主菜单</span><pre><span></span><code>                    ************ Main function menu ************
- 0 Show molecular structure and view orbitals
- 1 Output all properties at a point       2 Topology analysis
- 3 Output and plot specific property in a line
- 4 Output and plot specific property in a plane
- 5 Output and plot specific property within a spatial region (calc. grid data)
- 6 Check &amp; modify wavefunction
- 7 Population analysis and calculation of atomic charges
- 8 Orbital composition analysis           9 Bond order analysis
- 10 Plot total DOS, partial DOS, OPDOS, local DOS and photoelectron spectrum
- 11 Plot IR/Raman/UV-Vis/ECD/VCD/ROA/NMR spectrum
- 12 Quantitative analysis of molecular surface
- 13 Process grid data (No grid data is presented currently)
- 14 Adaptive natural density partitioning (AdNDP) analysis
- 15 Fuzzy atomic space analysis
- 16 Charge decomposition analysis (CDA) and plot orbital interaction diagram
- 17 Basin analysis                       18 Electron excitation analysis
- 19 Orbital localization analysis        20 Visual study of weak interaction
- 21 Energy decomposition analysis        22 Conceptual DFT (CDFT) analysis
- 23 ETS-NOCV analysis                    24 (Hyper)polarizability analysis
- 25 Electron delocalization and aromaticity analyses
- 26 Structure and geometry related analyses
- 100 Other functions (Part 1)            200 Other functions (Part 2)
- 300 Other functions (Part 3)
-</code></pre></div>
+<div class="language-text highlight"><span class="filename">Multiwfn主菜单</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>                    ************ Main function menu ************
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> 0 Show molecular structure and view orbitals
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> 1 Output all properties at a point       2 Topology analysis
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> 3 Output and plot specific property in a line
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> 4 Output and plot specific property in a plane
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a> 5 Output and plot specific property within a spatial region (calc. grid data)
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a> 6 Check &amp; modify wavefunction
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a> 7 Population analysis and calculation of atomic charges
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a> 8 Orbital composition analysis           9 Bond order analysis
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a> 10 Plot total DOS, partial DOS, OPDOS, local DOS and photoelectron spectrum
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a> 11 Plot IR/Raman/UV-Vis/ECD/VCD/ROA/NMR spectrum
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a> 12 Quantitative analysis of molecular surface
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a> 13 Process grid data (No grid data is presented currently)
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a> 14 Adaptive natural density partitioning (AdNDP) analysis
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a> 15 Fuzzy atomic space analysis
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a> 16 Charge decomposition analysis (CDA) and plot orbital interaction diagram
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a> 17 Basin analysis                       18 Electron excitation analysis
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a> 19 Orbital localization analysis        20 Visual study of weak interaction
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a> 21 Energy decomposition analysis        22 Conceptual DFT (CDFT) analysis
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a> 23 ETS-NOCV analysis                    24 (Hyper)polarizability analysis
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a> 25 Electron delocalization and aromaticity analyses
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a> 26 Structure and geometry related analyses
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a> 100 Other functions (Part 1)            200 Other functions (Part 2)
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a> 300 Other functions (Part 3)
+</span></code></pre></div>
 随后，键入<code>oi</code>进行ORCA输入文件的产生。首先，请先输入ORCA输入文件保存的路径，如下图所示：
-<div class="highlight"><pre><span></span><code> Input path for generating ORCA input file, e.g. C:\ltwd.inp
- If press ENTER button directly, will be exported to COF.inp
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> Input path for generating ORCA input file, e.g. C:\ltwd.inp
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> If press ENTER button directly, will be exported to COF.inp
+</span></code></pre></div>
 随后，进入ORCA计算参数确定界面，如下图所示：
-<div class="highlight"><span class="filename">ORCA输入文件相关选项</span><pre><span></span><code> -100 Use template input file provided by user to generate new input file
- -11 Choose ORCA version compatibility, current: &gt;ORCA 5.0
- -10 Set computational resources, core:   4 memory/core:  1000 MB
- -5 Set mixed basis set, current: Defined for    0 atoms
- -4 Other settings
- -2 Toggle adding diffuse functions, current: No
- -1 Toggle employing implicit solvation model, current: No
- 0 Select task, current: Single point
- 1 B97-3c      1b r2SCAN-3c
- 2 RI-BLYP-D3(BJ)/def2-TZVP
- 3 RI-B3LYP-D3(BJ)/def2-TZVP(-f)     4 RI-B3LYP-D3(BJ)/def2-TZVP
- 5 RI-wB97M-V/def2-TZVP
- 6 RI-PWPB95-D3(BJ)/def2-TZVPP       7 RI-PWPB95-D3(BJ)/def2-QZVPP
- 6b RI-wB97X-2-D3(BJ)/def2-TZVPP     7b RI-wB97X-2-D3(BJ)/def2-QZVPP
- 6c RI-revDSD-PBEP86-D4/def2-TZVPP   7c RI-revDSD-PBEP86-D4/def2-QZVPP
- 8 DLPNO-CCSD(T)/cc-pVTZ with normalPNO and RIJK
- 9 DLPNO-CCSD(T)/cc-pVTZ with tightPNO and RIJK
- 10 CCSD(T)/cc-pVTZ
- 11 CCSD(T)-F12/cc-pVDZ-F12 with RI
- 12 Approximated CCSD(T)/CBS with help of MP2 (cc-pVTZ-&gt;QZ extrapolation)
- 13 DLPNO-CCSD(T)/CBS with tightPNO and RIJK (def2-TZVPP-&gt;QZVPP extrapolation)
- 14 CCSD(T)/CBS (cc-pVTZ-&gt;QZ extrapolation)
- 20 sTD-DFT based on RI-wB97X-D3/def2-SV(P) orbitals
- 21 TDA-DFT RI-PBE0/def2-SV(P) with riints_disk (much faster than 22)
- 22 TDDFT RI-PBE0/def2-SV(P)
- 23 TDDFT RI-RSX-QIDH/def2-TZVP    231 TDDFT RI-DSD-PBEP86/def2-TZVP
- 24 EOM-CCSD/cc-pVTZ                 25 STEOM-DLPNO-CCSD/def2-TZVP
-</code></pre></div>
+<div class="language-text highlight"><span class="filename">ORCA输入文件相关选项</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> -100 Use template input file provided by user to generate new input file
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a> -11 Choose ORCA version compatibility, current: &gt;ORCA 5.0
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> -10 Set computational resources, core:   4 memory/core:  1000 MB
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> -5 Set mixed basis set, current: Defined for    0 atoms
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> -4 Other settings
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a> -2 Toggle adding diffuse functions, current: No
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a> -1 Toggle employing implicit solvation model, current: No
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a> 0 Select task, current: Single point
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a> 1 B97-3c      1b r2SCAN-3c
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a> 2 RI-BLYP-D3(BJ)/def2-TZVP
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a> 3 RI-B3LYP-D3(BJ)/def2-TZVP(-f)     4 RI-B3LYP-D3(BJ)/def2-TZVP
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a> 5 RI-wB97M-V/def2-TZVP
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a> 6 RI-PWPB95-D3(BJ)/def2-TZVPP       7 RI-PWPB95-D3(BJ)/def2-QZVPP
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a> 6b RI-wB97X-2-D3(BJ)/def2-TZVPP     7b RI-wB97X-2-D3(BJ)/def2-QZVPP
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a> 6c RI-revDSD-PBEP86-D4/def2-TZVPP   7c RI-revDSD-PBEP86-D4/def2-QZVPP
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a> 8 DLPNO-CCSD(T)/cc-pVTZ with normalPNO and RIJK
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a> 9 DLPNO-CCSD(T)/cc-pVTZ with tightPNO and RIJK
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a> 10 CCSD(T)/cc-pVTZ
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a> 11 CCSD(T)-F12/cc-pVDZ-F12 with RI
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a> 12 Approximated CCSD(T)/CBS with help of MP2 (cc-pVTZ-&gt;QZ extrapolation)
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a> 13 DLPNO-CCSD(T)/CBS with tightPNO and RIJK (def2-TZVPP-&gt;QZVPP extrapolation)
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a> 14 CCSD(T)/CBS (cc-pVTZ-&gt;QZ extrapolation)
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a> 20 sTD-DFT based on RI-wB97X-D3/def2-SV(P) orbitals
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a> 21 TDA-DFT RI-PBE0/def2-SV(P) with riints_disk (much faster than 22)
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a> 22 TDDFT RI-PBE0/def2-SV(P)
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a> 23 TDDFT RI-RSX-QIDH/def2-TZVP    231 TDDFT RI-DSD-PBEP86/def2-TZVP
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a> 24 EOM-CCSD/cc-pVTZ                 25 STEOM-DLPNO-CCSD/def2-TZVP
+</span></code></pre></div>
 对于上述的选择，有以下的几点需要注意：</p>
 <ul>
 <li>对于选项<code>-11</code>：课题组超算上安装的ORCA版本为5.0.3，此选项无需更改</li>
@@ -749,23 +749,23 @@
 <h4 id="step3-orca">Step3: 利用命令提交ORCA任务</h4>
 <ul>
 <li>虚拟机中提交ORCA计算任务的命令为：
-<div class="highlight"><span class="filename">虚拟机中提交ORCA任务的命令</span><pre><span></span><code>orca [name of input file for ORCA] &gt; [name of output file for ORCA]
-</code></pre></div>
+<div class="language-text highlight"><span class="filename">虚拟机中提交ORCA任务的命令</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>orca [name of input file for ORCA] &gt; [name of output file for ORCA]
+</span></code></pre></div>
 例如：<br />
 <code>orca test.inp &gt; test.out</code>：ORCA的输入文件的名字为<code>test.inp</code>，ORCA计算结果写入<code>test.out</code>文件中</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注意</p>
 <p>上述命令能正确执行的前提条件是在.bashrc文件中加入了ORCA的可执行文件目录。若ORCA解压后的目录是/sob/orca600/，就在.bashrc文件里加入下面的几行。
-<div class="highlight"><pre><span></span><code>export PATH=$PATH:/sob/orca600
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/sob/orca600
-alias orca=&#39;/sob/orca600/orca&#39;
-</code></pre></div></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>export PATH=$PATH:/sob/orca600
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/sob/orca600
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>alias orca=&#39;/sob/orca600/orca&#39;
+</span></code></pre></div></p>
 </div>
 <ul>
 <li>超算中提交ORCA计算任务的命令为：
-<div class="highlight"><span class="filename">超算中提交ORCA任务的命令</span><pre><span></span><code>SubOr.sh [name of input file for ORCA] [cores number, default: 16]
-</code></pre></div>
+<div class="language-text highlight"><span class="filename">超算中提交ORCA任务的命令</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>SubOr.sh [name of input file for ORCA] [cores number, default: 16]
+</span></code></pre></div>
 例如：<br />
 <code>SubOr.sh test.inp 4</code>：ORCA输入文件的名字为<code>test.inp</code>，运行该文件所用的核数为<code>4</code>
 <code>SubOr.sh test.inp</code>：ORCA输入文件的名字为<code>test.inp</code>，运行该文件所用的核数为<code>16</code></li>
@@ -775,20 +775,20 @@ alias orca=&#39;/sob/orca600/orca&#39;
 <p>在超算中，ORCA运行的核数以<code>SubOr.sh</code>命令中所规定的核数为准。</p>
 </div>
 <p>在ORCA的输入文件中，<code>%pal nprocs</code>后跟的数字即为运行该计算任务的核数，例如：
-<div class="highlight"><pre><span></span><code>%pal nprocs   10 end
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>%pal nprocs   10 end
+</span></code></pre></div>
 在利用<code>SubOr.sh</code>命令提交ORCA计算任务时，命令会自动把ORCA输入文件中所规定的核数改为<code>SubOr.sh</code>命令中所规定的核数。</p>
 <div class="admonition note">
 <p class="admonition-title">采用<code>SubOr.sh</code>脚本提交<code>ORCA</code>的注意事项</p>
 <p><li><code>ORCA</code>输入文件需要由<code>Multiwfn</code>生成，否则会报错。如下所示<br />
-<div class="highlight"><pre><span></span><code>Warning! Warning! Warning! Warning! There is no %pal in your input file.
-Please use Multiwfn to generate the input file for ORCA!
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Warning! Warning! Warning! Warning! There is no %pal in your input file.
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Please use Multiwfn to generate the input file for ORCA!
+</span></code></pre></div>
 </li>
 <li>若<code>ORCA</code>输入文件中<code>%pal nprocs</code>这一行所规定运行的核数与<code>SubOr.sh</code>命令中所确定的核数不一致，会出现以下的提示<br />
-<div class="highlight"><pre><span></span><code>!!! Number of cores in 36 is not equal to number of cores in SubOr.sh commmand !!!
-!!! Number of cores in test.inp has been adjusted to 16 !!!
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>!!! Number of cores in 36 is not equal to number of cores in SubOr.sh commmand !!!
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>!!! Number of cores in test.inp has been adjusted to 16 !!!
+</span></code></pre></div>
 </li></p>
 </div>
 <h4 id="step4">Step4: 获取计算结果</h4>
@@ -799,23 +799,23 @@ Please use Multiwfn to generate the input file for ORCA!
 <p>可在ORCA输入文件中加上<code>%moinp "XXX.gbw"</code>(XXX.gbw是要读取的gbw文件名)这一行进行波函数读取。此外，在进行单点能计算时(仅在进行单点能计算时)，ORCA会先检测有没有跟输入文件同名的gbw文件，如果有的话会自动读取波函数，而不重新初猜进行SCF迭代。如果不想自动读取波函数，需要使用<code>!noautostart</code>关键词。</p>
 </div>
 <p>对于某些需要更为细致研究体系的情况，进行波函数分析是一个很好的选择。目前，可使用Multiwfn对ORCA计算得到的波函数文件进行波函数分析。ORCA直接输出的波函数文件为<code>gbw</code>文件，但是Multiwfn无法直接对gbw文件进行读取，需使用到ORCA自带的<code>orca_2mkl</code>命令。在虚拟机中实现上述转换的代码如下：
-<div class="highlight"><pre><span></span><code>orca_2mkl MIO -molden
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>orca_2mkl MIO -molden
+</span></code></pre></div>
 采用上述的命令能够将当前目录下的<code>MIO.gbw</code>文件转换成<code>molden</code>文件。</p>
 <p>在超算中可使用<code>gbw.sh</code>命令实现上述转换。<code>gbw.sh</code>命令的语法如下：
-<div class="highlight"><span class="filename">将gbw文件转换成molden文件的命令</span><pre><span></span><code>gbw.sh [name of gbw file]
-</code></pre></div>
+<div class="language-text highlight"><span class="filename">将gbw文件转换成molden文件的命令</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>gbw.sh [name of gbw file]
+</span></code></pre></div>
 例如：</br>
 <code>gbw.sh test.gbw</code>：将<code>test.gbw</code>转换成<code>test.molden</code>。</p>
 <div class="admonition note">
 <p class="admonition-title">采用<code>gbw.sh</code>脚本实现波函数文件格式转换的注意事项</p>
 <p><li><code>gbw.sh</code>脚本后需接<code>gbw</code>文件名参数，否则会报错，如下所示。
-<div class="highlight"><pre><span></span><code>Warning! Warning! Warning! Warning! There is no input file.
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Warning! Warning! Warning! Warning! There is no input file.
+</span></code></pre></div>
 </li>
 <li><code>gbw.sh</code>脚本后的<code>gbw</code>若不存在也会报错，如下所示。
-<div class="highlight"><pre><span></span><code>Warning! Warning! Warning! Warning! test.gbw doesn&#39;t exit
-</code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Warning! Warning! Warning! Warning! test.gbw doesn&#39;t exit
+</span></code></pre></div>
 </li></p>
 </div>
 
@@ -889,6 +889,12 @@ Please use Multiwfn to generate the input file for ORCA!
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -919,7 +925,7 @@ Please use Multiwfn to generate the input file for ORCA!
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.annotate", "navigation.top"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="assets/javascripts/bundle.60a45f97.min.js"></script>
