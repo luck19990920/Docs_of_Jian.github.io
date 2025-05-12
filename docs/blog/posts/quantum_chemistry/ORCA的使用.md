@@ -2,11 +2,9 @@
 categories:
     - Computational Chemistry
 date: 2024-09-16
-tags:
-    - Computational Chemistry
-    - Quantum Chemistry
 comments: true
 slug: ORCA_usage/
+authors: [zhangjian]
 ---
 
 # ORCA的使用

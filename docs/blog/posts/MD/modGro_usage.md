@@ -2,11 +2,9 @@
 categories:
     - Computational Chemistry
 date: 2025-04-26
-tags:
-    - Computational Chemistry
-    - Molecular Dynamics Simulation
 comments: true
 slug: modGro_usage/
+authors: [zhangjian]
 ---
 
 # modGro的使用方法

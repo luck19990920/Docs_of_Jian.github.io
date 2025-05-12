@@ -2,11 +2,9 @@
 categories:
     - Computer Science
 date: 2025-04-20
-tags:
-    - Computer Science
-    - RISC-V
 comments: true
 slug: single_cycle/
+authors: [zhangjian]
 ---
 
 # 单周期微架构的实现(RISC-V指令集)

@@ -4,6 +4,7 @@ site_url: http://blog.99092019.xyz
 
 theme:
   name: material
+  favicon: assets/logo.jpg
   font:
     text: "Microsoft Yahei"
     code: "Consolas,Courier,courier new,stkaiti,kaiti,simkai,monospace"
@@ -29,15 +30,21 @@ theme:
     - content.code.copy
     - content.code.annotate
     - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.sections
+    - navigation.path
 
 plugins:
   - search
+  - awesome-nav
   - blog:
-      blog_dir: .
+      blog_dir: blog
       post_url_format: "{slug}"
       pagination_per_page: 5
-  - tags:
-      tags_file: tags.md
+      categories: true
   
 
 markdown_extensions:
@@ -60,6 +67,6 @@ extra:
     property: G-EHVNYDZB7M
 
 copyright: Copyright &copy; 2024 - 2025 Jian Zhang
-repo_url: https://github.com/luck19990920
-repo_name: luck19990920.github
+repo_url: https://github.com/luck19990920/Docs_of_Jian.github.io/
+repo_name: Docs_of_Jian
 use_directory_urls: false

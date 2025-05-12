@@ -2,12 +2,10 @@
 categories:
     - Computer Science
 date: 2025-04-28
-tags:
-    - Computer Science
-    - RISC-V
 comments: true
 draft: true
 slug: multicycle/
+authors: [zhangjian]
 ---
 
 # 多周期微架构的实现(RISC-V指令集)

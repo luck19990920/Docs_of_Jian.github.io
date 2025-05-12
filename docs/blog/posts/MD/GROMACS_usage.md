@@ -2,11 +2,9 @@
 categories:
     - Computational Chemistry
 date: 2024-10-21
-tags:
-    - Computational Chemistry
-    - Molecular Dynamics Simulation
 comments: true
 slug: gromacs_usage/
+authors: [zhangjian]
 ---
 
 # GROMACS的使用

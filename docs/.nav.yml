@@ -1,0 +1,7 @@
+sort:
+  direction: desc
+  by: filename
+
+nav:
+    - 博客: blog
+    - 关于: about_me.md

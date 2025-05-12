@@ -2,12 +2,9 @@
 categories:
     - Computational Chemistry
 date: 2025-05-11
-tags:
-    - Computational Chemistry
-    - Molecular Dynamics Simulation
-    - Python
 comments: true
 slug: MDAnalysis_usage/
+authors: [zhangjian]
 ---
 
 # MDAnalysis使用方法简介
