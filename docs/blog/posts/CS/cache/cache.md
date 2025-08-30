@@ -9,11 +9,17 @@ authors: [zhangjian]
 
 # 缓存的相关理解
 
-本篇文章主要结合Computer Systems: A Programmer's Perspective与Digital Design and Computer Architecture(RISC-V Edition)这两本书记录对缓存的相关理解。
+本篇文章主要结合Computer Systems: A Programmer's Perspective、Digital Design and Computer Architecture(RISC-V Edition)以及Memory Systems Introduction Computing Handbook(By Onur Mutlu)记录对缓存的相关理解。
 
 <!-- more -->
 
 ### 为什么要缓存
+
+计算机的基本构成可分为如下的三个部分：(1)用于对数据处理的计算单元；(2)用于对数据存储的单元；(3)连通上述两个部分的通讯单元。在这之中，对数据存储的单元可分为两个部分：存储系统(memory system)和储存系统(storage system)。前者用于存储目前正在运行的程序的相关数据。而后者用于目前暂时还用不到的数据。
+<figure markdown="span">
+  ![](computing_system.png){ width="500" }
+</figure>
+
 计算机的性能取决于处理器的性能与存储系统的性能。处理器的运算速度和在存储系统寻找相关数据的速度要足够快才能保证计算机的性能足够好。一个理想的存储系统应该足够快、便宜并且存储容量大。但是，实际上这三者无法同时满足。处理器与主存(DRAM)的效率比较如下图所示。
 <figure markdown="span">
   ![](cpumemperf.png){ width="500" }
