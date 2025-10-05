@@ -1,4 +1,5 @@
 ---
+title: modGro的使用方法
 categories:
     - Computational Chemistry
 date: 2025-04-26

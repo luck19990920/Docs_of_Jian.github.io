@@ -1,4 +1,5 @@
 ---
+title: 单周期微架构的实现(RISC-V指令集)
 categories:
     - Computer Science
 date: 2025-04-20

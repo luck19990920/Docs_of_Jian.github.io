@@ -1,4 +1,5 @@
 ---
+title: ORCA的使用
 categories:
     - Computational Chemistry
 date: 2024-09-16
@@ -145,18 +146,18 @@ SubOr.sh [name of input file for ORCA] [cores number, default: 16]
 
 !!! note "采用`SubOr.sh`脚本提交`ORCA`的注意事项"
 
-    <li>`ORCA`输入文件需要由`Multiwfn`生成，否则会报错。如下所示<br />
-    ```
-    Warning! Warning! Warning! Warning! There is no %pal in your input file.
-    Please use Multiwfn to generate the input file for ORCA!
-    ```
-    </li>
-    <li>若`ORCA`输入文件中`%pal nprocs`这一行所规定运行的核数与`SubOr.sh`命令中所确定的核数不一致，会出现以下的提示<br />
-    ```
-    !!! Number of cores in 36 is not equal to number of cores in SubOr.sh commmand !!!
-    !!! Number of cores in test.inp has been adjusted to 16 !!!
-    ```
-    </li>
+    - `ORCA`输入文件需要由`Multiwfn`生成，否则会报错。如下所示<br />
+        ```
+        Warning! Warning! Warning! Warning! There is no %pal in your input file.
+        Please use Multiwfn to generate the input file for ORCA!
+        ```
+    
+    - 若`ORCA`输入文件中`%pal nprocs`这一行所规定运行的核数与`SubOr.sh`命令中所确定的核数不一致，会出现以下的提示<br />
+        ```
+        !!! Number of cores in 36 is not equal to number of cores in SubOr.sh commmand !!!
+        !!! Number of cores in test.inp has been adjusted to 16 !!!
+        ```
+    
 
 
 #### Step4: 获取计算结果
@@ -181,13 +182,11 @@ gbw.sh [name of gbw file]
 
 !!! note "采用`gbw.sh`脚本实现波函数文件格式转换的注意事项"
 
-    <li>`gbw.sh`脚本后需接`gbw`文件名参数，否则会报错，如下所示。
+    - `gbw.sh`脚本后需接`gbw`文件名参数，否则会报错，如下所示。
     ```
     Warning! Warning! Warning! Warning! There is no input file.
     ```
-    </li>
-    <li>`gbw.sh`脚本后的`gbw`若不存在也会报错，如下所示。
+    - `gbw.sh`脚本后的`gbw`若不存在也会报错，如下所示。
     ```
     Warning! Warning! Warning! Warning! test.gbw doesn't exit
     ```
-    </li>

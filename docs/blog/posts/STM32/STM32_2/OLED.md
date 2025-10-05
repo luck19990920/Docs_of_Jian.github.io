@@ -1,4 +1,5 @@
 ---
+title: 对于点亮OLED屏的一些思考
 categories:
     - STM32
 date: 2025-09-14

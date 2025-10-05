@@ -1,4 +1,5 @@
 ---
+title: 缓存的相关理解
 categories:
     - Computer Science
 date: 2025-05-24

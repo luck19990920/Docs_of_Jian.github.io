@@ -1,0 +1,11 @@
+@import url("https://fontsapi.zeoseven.com/2/main/result.css");
+body {
+    font-family: "LXGW ZhenKai";
+    font-weight: normal;
+}
+
+:root>* {
+    --md-primary-fg-color: #4682B4;
+    --md-primary-fg-color--light: #4682B4;
+    --md-primary-fg-color--dark: #4682B4;
+}

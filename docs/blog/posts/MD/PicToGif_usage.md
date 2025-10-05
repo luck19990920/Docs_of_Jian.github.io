@@ -1,4 +1,5 @@
 ---
+title: PicToGif的使用方法
 categories:
     - Computational Chemistry
 date: 2025-08-30
