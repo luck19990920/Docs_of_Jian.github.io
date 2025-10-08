@@ -10,7 +10,7 @@ hide:
 
 # 我是谁
 
-<div class="image-box">
+<!-- <div class="image-box">
     <img src="./about_me.png">
 </div>
 <style>
@@ -34,7 +34,7 @@ hide:
         transform: scale(1.05);
     }
 
-</style>
+</style> -->
 
 !!! note "About me"
     - 一名在武汉的搬砖人
@@ -54,11 +54,14 @@ hide:
 
 # 致每一位陌生人
 
-<div class="image-box">
+<!-- <div class="image-box">
     <img src="./for_you.JPG">
-</div>
+</div> -->
+<figure markdown="span">
+  ![](./for_you.JPG){ width="600" }
+</figure>
 <p align="center">(拍摄于烟台市烟台山)</p>
-# 我的履历
+<!-- # 我的履历
 <style>
     .timeline {
       display: flex;
@@ -138,7 +141,7 @@ hide:
       <h3>2025</h3>
       <p>探索新可能</p>
     </div>
-  </div>
+  </div> -->
 
 
 # 我的联系方式

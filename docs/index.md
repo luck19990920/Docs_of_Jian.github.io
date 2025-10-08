@@ -8,29 +8,40 @@ hide:
   - toc
 ---
 
-<div class="intro_box">
+<!-- <div class="intro_box">
     <div class="font_box"><p>欢迎来到Docs of Jian</p></div>
     <div class="img_box"><img src="./index-1.png"></img></div>
 </div>
 <style>
     .intro_box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 64px;
+      margin: 48px 0 32px 0;
+      flex-wrap: wrap;
+      min-height: 300px;
       /* border: 1px solid #000000; */
-      height: 300px;
-      width: 710px;
-      margin: 0 auto;
+      /* height: 300px; */
+      /* height: 40%; */
+      /* width: 710px; */
+      /* width: 60%;
+      margin: 0 auto; */
       border-radius: 20px;
       box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
     }
     .font_box {
       height: 300px;
-      width: 500px;
+      /* width: 500px; */
+      width: 70%;
       background-color: #F0F8FF;
       float: left;
       border-radius: 20px;
     }
     .img_box {
       height: 300px;
-      width: 200.25px;
+      /* width: 200.25px; */
+      width: 30%;
       float: right;
     }
     .font_box p {
@@ -44,6 +55,7 @@ hide:
       color: #000000;
     }
     .img_box img {
+      float: right;
       height: 300px;
       padding-right: 0px;
       border-radius: 20px;
@@ -57,8 +69,9 @@ hide:
     }
 
 </style>
+
 <br />
-<br />
+<br /> -->
 
 # 本网站的前生今世
 
