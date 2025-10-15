@@ -16,11 +16,12 @@ def read_yaml(path: Path):
     if result is None:
         return 
     pattern_result = result.group(1)
-    try:
-        categories = yaml.safe_load(pattern_result)["categories"]
-        title = yaml.safe_load(pattern_result)["title"]
-    except:
-        return 
+    # try:
+    categories = yaml.safe_load(pattern_result)["categories"]
+    title = yaml.safe_load(pattern_result)["title"]
+    print(path)
+    # except:
+    #     return 
     
     global d
     for c in categories:
@@ -38,11 +39,12 @@ def write_yaml(path: Path):
                 f.write(f'* [{v[0]}]({".\\"+str(v[1])})\n')
 
 
-for md_file in path_blog.rglob("*.md"):
-    read_yaml(md_file)
+# for md_file in path_blog.rglob("*.md"):
+#     read_yaml(md_file)
 
-write_yaml(path_tag)
+# write_yaml(path_tag)
 
+read_yaml(Path(r"C:\Users\89732\Desktop\web\mkdocs-blog-starter-project\Docs_of_Jian.github.io\docs\blog\posts\quantum_chemistry\ORCA的使用.md"))
 
 
 
