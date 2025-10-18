@@ -25,7 +25,7 @@ GROMACS是由荷兰格罗宁根大学开发，1991年发布最初版本。目前
   
   `Packmol`是一个免费的、构建分子动力学模拟初始结构的工具。关于`Packmol`的使用，可参考<a href="http://sobereva.com/473" target="_blank">分子动力学初始结构构建程序Packmol的使用</a>。另外，本网页也提供了[使用手册](./Packmol_user_guide.pdf){:target="_blank"}。
 
-------
+
 * <strong>采用GROMACS中的命令进行建模</strong>
   
   在GROMACS中，常用的进行建模的命令如下：
@@ -49,7 +49,7 @@ GROMACS是由荷兰格罗宁根大学开发，1991年发布最初版本。目前
      
      参数`-f test.gro`的含义是需要在`test.gro`对应的这个体系中插入分子。参数`-ci CL.pdb`为插入分子的结构文件(例如这里插入的是Cl离子，那么`CL.pdb`为一个Cl离子的结构)在`test.gro`。参数`-o out.gro`为插入后的结构输出到`out.gro`。参数`-nmol 55`为插入的分子数量为55个。
 
-------
+
 * <strong>采用VMD进行建模</strong>
 
   通常我们可以使用VMD对结构进行拼接，然后得到拼接之后的结构。在对多个结构进行拼接时，除了使用VMD完成，还可以使用[modGro](https://github.com/luck19990920/Scripts/tree/master/modGro){:target="_blank"}完成。

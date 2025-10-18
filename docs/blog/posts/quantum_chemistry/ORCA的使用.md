@@ -16,7 +16,6 @@ authors: [zhangjian]
 
 ORCA是著名的量子化学软件。该程序可在<a href='https://orcaforum.kofo.mpg.de/app.php/portal' target='_blank'>ORCA官网</a>上进行下载。下载前需先注册相应的ORCA用户账号。若因为特殊原因无法下载ORCA，可通过<a href='http://bbs.keinsci.com/thread-6392-1-1.html' target='_blank'>网盘</a>进行下载(注：若需使用ORCA，请务必主动去ORCA官网注册，仔细阅读使用条款并确认自己有免费使用的权限)。
 
----
 
 ### ORCA的安装
 
