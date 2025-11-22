@@ -306,6 +306,98 @@ modGro.exe < gro_file.txt
 rm gro_file.txt
 echo "Merge successfully!"
 ```
+
+#### 例3：平移并合并多个gro文件
+
+将要进行合并操作的gro文件放置在modGro同级目录下，然后在该目录下新建一个名为merge.txt的文件。该文件中指定了要合并的gro文件的文件名、平移量以及最终盒子的尺寸。一个典型的merge.txt文件内容如下：
+```
+sim_1.gro    
+0,0,0   
+sim_2.gro  
+0,0,40     
+sim_3.gro   
+80,0,0      
+30,0,0      
+0,30,0      
+0,0,110    
+```
+
+* 第1-2行：合并sim_1.gro，但不平移
+* 第3-4行：合并sim_2.gro，将其沿着z轴平移40埃
+* 第5-6行：合并sim_3.gro，将其沿着x轴平移80埃
+* 第7-9行：指定最终盒子的三边的长度分别为30埃、30埃和110埃。
+
+需要注意的是merge.txt文件的最后三行始终是盒子的信息。
+随后将下述的脚本放置在modGro同级目录下并运行，就可以得到最终平移并合并的gro文件。
+
+``` shell title="在Linux中运行的Shell脚本" 
+#!/usr/bin/bash
+
+line_number=$(grep -c . merge.txt)     
+#echo $line_number
+for i in $(seq 1 2 $[line_number-3]); do
+    sed -n "${i}p" merge.txt >> tmp_1.txt
+    echo -e "3\n" >> tmp_1.txt
+    sed -n "$((i+1))p" merge.txt >> tmp_1.txt
+    echo -e "9" >> tmp_1.txt
+    echo -e "${i}".merge"" >> tmp_1.txt
+    echo -e "r" >> tmp_1.txt
+done
+
+for i in $(seq 1 2 $[line_number-3]); do
+    echo -e "${i}".merge"" >> tmp_2.txt
+done
+
+sed -i '1a 7' tmp_2.txt
+echo -e "q\n6" >> tmp_2.txt
+grep -v '^\s*$' merge.txt | tail -n 3 >> tmp_2.txt
+echo -e "9" >> tmp_2.txt
+echo "./merge.gro" >> tmp_2.txt
+echo "q" >> tmp_2.txt
+
+cat tmp_1.txt tmp_2.txt >> tmp.txt
+rm tmp_1.txt
+rm tmp_2.txt
+modGro < tmp.txt
+rm *.merge
+rm tmp.txt
+echo "Merge successfully!"
+```
+
+``` shell title="在Windows的git中运行的Shell脚本" 
+#!/usr/bin/bash
+
+line_number=$(grep -c . merge.txt)     
+#echo $line_number
+for i in $(seq 1 2 $[line_number-3]); do
+    sed -n "${i}p" merge.txt >> tmp_1.txt
+    echo -e "3\n" >> tmp_1.txt
+    sed -n "$((i+1))p" merge.txt >> tmp_1.txt
+    echo -e "9" >> tmp_1.txt
+    echo -e "${i}".merge"" >> tmp_1.txt
+    echo -e "r" >> tmp_1.txt
+done
+
+for i in $(seq 1 2 $[line_number-3]); do
+    echo -e "${i}".merge"" >> tmp_2.txt
+done
+
+sed -i '1a 7' tmp_2.txt
+echo -e "q\n6" >> tmp_2.txt
+grep -v '^\s*$' merge.txt | tail -n 3 >> tmp_2.txt
+echo -e "9" >> tmp_2.txt
+echo "./merge.gro" >> tmp_2.txt
+echo "q" >> tmp_2.txt
+
+cat tmp_1.txt tmp_2.txt >> tmp.txt
+rm tmp_1.txt
+rm tmp_2.txt
+modGro.exe < tmp.txt
+rm *.merge
+rm tmp.txt
+echo "Merge successfully!"
+```
+
 ### 附：对于modGro内部实现的一些说明
 #### 2.0版本
 (以下内容 2025-Mar-9更新)
