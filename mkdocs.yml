@@ -53,6 +53,8 @@ nav:
     - 大同: moment/datong.md
     - 武汉: moment/wuhan.md
     - 恩施: moment/enshi.md
+  - 碎碎念:
+    - 从0到1：开启商业与未来的秘密: read/zero_to_one.md
   - 关于: about.md
 
 plugins:
@@ -94,7 +96,7 @@ extra:
 extra_css:
   - stylesheets/extra.css 
   
-copyright: Copyright &copy; 2024 - 2025 Jian Zhang
+copyright: Copyright &copy; 2024 - 2026 Jian Zhang
 repo_url: https://github.com/luck19990920/Docs_of_Jian.github.io/
 repo_name: Docs_of_Jian
 use_directory_urls: false
