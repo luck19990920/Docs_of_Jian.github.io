@@ -41,6 +41,7 @@ theme:
     - search.suggest         # 搜索输入一些字母时推荐补全整个单词
     - search.highlight       # 搜索出的文章关键词加入高亮
     - search.share           # 搜索分享
+    - math.jax
 
 nav:
   - 主页: index.md 
@@ -55,6 +56,7 @@ nav:
     - 恩施: moment/enshi.md
   - 碎碎念:
     - 从0到1：开启商业与未来的秘密: read/zero_to_one.md
+    - 贪婪的多巴胺: read/the_molecule_of_more.md
   - 关于: about.md
 
 plugins:
@@ -87,6 +89,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
 
 extra:
   analytics:
@@ -95,6 +99,10 @@ extra:
 
 extra_css:
   - stylesheets/extra.css 
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  
   
 copyright: Copyright &copy; 2024 - 2026 Jian Zhang
 repo_url: https://github.com/luck19990920/Docs_of_Jian.github.io/

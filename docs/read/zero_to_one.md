@@ -1,7 +1,7 @@
 ---
 date: 2026-01-17
 comments: true
-slug: zer_to_one/
+slug: zero_to_one/
 authors: [zhangjian]
 ---
 

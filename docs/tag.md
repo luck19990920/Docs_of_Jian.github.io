@@ -17,6 +17,7 @@ hide_comment: true
 * [modGro的使用方法](.\blog\posts\MD\modGro_usage.md)
 * [PicToGif的使用方法](.\blog\posts\MD\PicToGif_usage.md)
 * [ORCA的使用](.\blog\posts\quantum_chemistry\ORCA的使用.md)
+* [分子动力学模拟之自相关函数](.\blog\posts\MD\autocol.md)
 
 ## Computer Science
 
