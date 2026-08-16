@@ -94,3 +94,5 @@ hide:
 
 * [Wcowin's Blog](https://wcowin.work/): 通过该网站，我学习到了如何将HTML/CSS/Javascript/Python与Mkdocs结合。
 * [维燕的数字花园](https://weiyan.cc/blog/)：学习到了该网站的排版。
+
+同时，也要感谢俊对本网站的构建提出了诸多可行的建议。
